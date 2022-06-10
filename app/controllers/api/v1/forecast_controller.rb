@@ -8,8 +8,8 @@ class Api::V1::ForecastController < ApplicationController
 
   private
     def get_latitude_longitude
-      location = params[:location]
-      LocationFacade.latitude_longitude(location)
+      city = params[:location]
+      LocationFacade.coordinates_for_city(city)
     end 
 
 

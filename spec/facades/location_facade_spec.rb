@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe LocationFactory do
+RSpec.describe LocationFacade do
 
-  it 'returns a Location poro' do
-    location = LocationFacade.latitude_longitude('boston,ma')
+  it 'returns a Location poro', :vcr do
+    location = LocationFacade.coordinates_for_city('boston,ma')
 
     expect(location).to be_a(Location)
   end
