@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe CurrentWeather do
+RSpec.describe CurrentForecast do
 
   it 'exists and has readable attributes' do
     data = {
@@ -27,8 +27,8 @@ RSpec.describe CurrentWeather do
                           }
                           ]
             }
-    current = CurrentWeather.new(data)
-    expect(current).to be_a CurrentWeather
+    current = CurrentForecast.new(data)
+    expect(current).to be_a CurrentForecast
     expect(current.datetime).to eq('2022-06-10 14:30:27 -0600')
     expect(current.sunrise).to eq('2022-06-10 03:07:17 -0600')
     expect(current.sunset).to eq('2022-06-10 18:20:18 -0600')

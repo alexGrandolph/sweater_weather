@@ -1,4 +1,4 @@
-class CurrentWeather
+class CurrentForecast
   attr_reader :datetime, :sunrise, :sunset, :temp, :feels_like, :humidity, :uvi, :visibility, :conditions, :icon
 
 
