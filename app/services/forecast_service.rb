@@ -1,0 +1,6 @@
+class ForecastService
+
+
+
+
+end 
