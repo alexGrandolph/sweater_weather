@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe LocationService do
 
-  it 'returns json forecast for given location', :vcr do
+  it 'returns json location/lat/lon for given location', :vcr do
 
     forecast = LocationService.location_by_city('denver,co')
 
@@ -16,7 +16,5 @@ RSpec.describe LocationService do
     expect(forecast[:results][0][:locations][1][:latLng][:lat]).to eq(39.738453)
     expect(forecast[:results][0][:locations][1][:latLng][:lng]).to eq(-104.984853)
   end 
-
-
 
 end 
