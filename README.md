@@ -7,6 +7,8 @@
     "attributes": {
       "current_weather": {
         "datetime": "2020-09-30 13:27:03 -0600",
+        "sunrise": 1654852037,
+        "sunset": 1654906818,
         "temperature": 79.4,*IN FARENHEIT*
         "feelsLike": 79.4,
         "humidity": 23,
