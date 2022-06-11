@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Get Forecast Endpoint' do
-  describe 'Current Weather In Response Test'
+  describe 'Current Weather In Response Test' do
     it 'Current weather attribute is present with only desired keys/values', :vcr do
       headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
       city = 'boston,ma'
@@ -65,7 +65,6 @@ RSpec.describe 'Get Forecast Endpoint' do
       expect(daily.count).to eq(5)
 
       daily.each do |day|
-
         expect(day).to have_key(:datetime)
         expect(day).to have_key(:sunrise)
         expect(day).to have_key(:sunset)
@@ -73,7 +72,36 @@ RSpec.describe 'Get Forecast Endpoint' do
         expect(day).to have_key(:min_temp)
         expect(day).to have_key(:conditions)
         expect(day).to have_key(:icon)
-
       end 
+    end 
+  end 
+
+  describe "Hourly Weather In Response Test" do
+
+    it 'Hourly weather attribute is present with only desired keys/values', :vcr do
+      headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
+      city = 'ontario,ca'
+
+      get '/api/v1/forecast', headers: headers, params: { location: city }
+
+      expect(response).to be_successful
+      expect(response.status).to eq(200)
+
+      forecast = JSON.parse(response.body, symbolize_names: true)[:data]
+
+      expect(forecast[:attributes]).to have_key(:hourly_weather)
+      
+      hourly = forecast[:attributes][:hourly_weather]
+
+      expect(hourly).to be_an Array
+      expect(hourly.count).to eq(8)
+
+      hourly.each do |hour|
+        expect(hour).to have_key(:time)
+        expect(hour).to have_key(:temp)
+        expect(hour).to have_key(:conditions)
+        expect(hour).to have_key(:icon)
+      end 
+    end 
   end 
 end 
