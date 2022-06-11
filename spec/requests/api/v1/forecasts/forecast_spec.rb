@@ -62,8 +62,18 @@ RSpec.describe 'Get Forecast Endpoint' do
       daily = forecast[:attributes][:daily_weather]
       
       expect(daily).to be_an Array
-      binding.pry
       expect(daily.count).to eq(5)
 
+      daily.each do |day|
+
+        expect(day).to have_key(:datetime)
+        expect(day).to have_key(:sunrise)
+        expect(day).to have_key(:sunset)
+        expect(day).to have_key(:max_temp)
+        expect(day).to have_key(:min_temp)
+        expect(day).to have_key(:conditions)
+        expect(day).to have_key(:icon)
+
+      end 
   end 
 end 
