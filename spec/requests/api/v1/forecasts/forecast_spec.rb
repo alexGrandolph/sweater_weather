@@ -150,8 +150,6 @@ RSpec.describe 'Get Forecast Endpoint' do
 
       expect(response.status).to eq(404)
 
-
-
     end 
 
 

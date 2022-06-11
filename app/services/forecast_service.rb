@@ -8,6 +8,7 @@ class ForecastService
     response = conn.get do |c|
       c.params['lat'] = latitude
       c.params['lon'] = longitude
+      c.params['units'] = 'imperial'
       c.params['appid'] = ENV['WEATHER_KEY']
     end
     JSON.parse(response.body, symbolize_names: true)
