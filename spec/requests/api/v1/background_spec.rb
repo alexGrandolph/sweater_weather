@@ -28,4 +28,18 @@ RSpec.describe 'Get Backgrounds Endpoint' do
     expect(background[:image][:credit]).to have_key(:author)
 
   end
+
+  describe 'Bad Parameters' do
+
+    it '404 response if no parameters are sent', :vcr do
+
+      headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
+      city = ''
+
+      get '/api/v1/forecast', headers: headers, params: { location: city }
+
+      expect(response.status).to eq(404)
+
+    end
+  end 
 end
