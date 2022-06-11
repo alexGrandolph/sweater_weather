@@ -2,9 +2,9 @@ class Api::V1::BackgroundsController < ApplicationController
 
 
   def index
-    # binding.pry 
     location = params[:location]
-    background = BackgroundsFacade.get_background(location)
+    background = BackgroundFacade.get_background(location)
+    render json: BackgroundSerializer.background(background, location)
   end
   
 

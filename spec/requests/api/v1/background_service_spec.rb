@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Get Backgrounds Endpoint' do
-  it 'Returns only desired attributes for image/backgrounds requests' do
+  it 'Returns only desired attributes for image/backgrounds requests', :vcr do
     headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
     city = 'tempe,az'
 

@@ -11,8 +11,8 @@ class BackgroundService
       c.params['per_page'] = 1
       c.params['client_id'] = ENV['UNSPLASH_KEY']
     end 
-    # binding.pry
-    JSON.parse(response.body, symbolize_names: true)
+    result = JSON.parse(response.body, symbolize_names: true)
+    result[:results][0]
   end 
 
 

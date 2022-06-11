@@ -1,0 +1,92 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.unsplash.com/search/photos?client_id=lHgYyTTxgUwPDBEgFIxYhUJ2Hy_hVbdU4E_8k6KpWgk&order_by=relevant&per_page=1&query=tempe,az
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1152'
+      Server:
+      - Cowboy
+      Content-Type:
+      - application/json
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Request-Method:
+      - "*"
+      Access-Control-Allow-Headers:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Link,X-Total,X-Per-Page,X-RateLimit-Limit,X-RateLimit-Remaining
+      Cache-Control:
+      - max-age=86400,stale-if-error=3600,stale-while-revalidate=51485982450979572862364255993110449129520764751074790570458475943891573875482420390919197304960909162329722335436106435278414909997874828594305212183362928640
+      X-Unsplash-Version:
+      - v1
+      Warning:
+      - The tags property in this endpoint is deprecated. https://changelog.unsplash.com/deprecations/2021/07/12/tags-search-deprecation.html
+      Link:
+      - <https://api.unsplash.com/search/photos?client_id=lHgYyTTxgUwPDBEgFIxYhUJ2Hy_hVbdU4E_8k6KpWgk&order_by=relevant&page=2425&per_page=1&query=tempe%2Caz>;
+        rel="last", <https://api.unsplash.com/search/photos?client_id=lHgYyTTxgUwPDBEgFIxYhUJ2Hy_hVbdU4E_8k6KpWgk&order_by=relevant&page=2&per_page=1&query=tempe%2Caz>;
+        rel="next"
+      X-Total:
+      - '2425'
+      X-Per-Page:
+      - '1'
+      Content-Language:
+      - en
+      Etag:
+      - W/"9638589e3b70df4f0e79fd36e36752ef"
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Remaining:
+      - '48'
+      X-Request-Id:
+      - 9e893b5f-3502-4936-9ed2-a418d55f3d99
+      X-Runtime:
+      - '0.065614'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Via:
+      - 1.1 vegur, 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sat, 11 Jun 2022 20:37:19 GMT
+      Age:
+      - '0'
+      X-Served-By:
+      - cache-iad-kcgs7200071-IAD, cache-den8254-DEN
+      X-Cache:
+      - MISS, MISS
+      X-Cache-Hits:
+      - 0, 0
+      X-Timer:
+      - S1654979839.484754,VS0,VE116
+      Vary:
+      - Accept-Encoding, Origin,Authorization,Accept-Language,client-geo-region,Accept
+    body:
+      encoding: ASCII-8BIT
+      string: '{"total":2425,"total_pages":2425,"results":[{"id":"x16hh-bt9r4","created_at":"2021-01-08T21:39:39-05:00","updated_at":"2022-06-11T06:18:12-04:00","promoted_at":null,"width":3300,"height":2550,"color":"#f3f3f3","blur_hash":"LXNm7y4T?^?u#6?ItmIowwIUIpRk","description":"I
+        was at Tempe Market place and I saw this gentleman taking photos. I snapped
+        this because of his stance, and the angle he held the camera looked staged.
+        Don''t you just love it when random people pose without knowing it? ","alt_description":"man
+        in maroon polo shirt holding black dslr camera","urls":{"raw":"https://images.unsplash.com/photo-1610159945493-a2ae39c4e010?ixid=MnwzMzY4Njd8MHwxfHNlYXJjaHwxfHx0ZW1wZSUyQ2F6fGVufDB8fHx8MTY1NDk3OTgzOQ\u0026ixlib=rb-1.2.1","full":"https://images.unsplash.com/photo-1610159945493-a2ae39c4e010?crop=entropy\u0026cs=tinysrgb\u0026fm=jpg\u0026ixid=MnwzMzY4Njd8MHwxfHNlYXJjaHwxfHx0ZW1wZSUyQ2F6fGVufDB8fHx8MTY1NDk3OTgzOQ\u0026ixlib=rb-1.2.1\u0026q=80","regular":"https://images.unsplash.com/photo-1610159945493-a2ae39c4e010?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=MnwzMzY4Njd8MHwxfHNlYXJjaHwxfHx0ZW1wZSUyQ2F6fGVufDB8fHx8MTY1NDk3OTgzOQ\u0026ixlib=rb-1.2.1\u0026q=80\u0026w=1080","small":"https://images.unsplash.com/photo-1610159945493-a2ae39c4e010?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=MnwzMzY4Njd8MHwxfHNlYXJjaHwxfHx0ZW1wZSUyQ2F6fGVufDB8fHx8MTY1NDk3OTgzOQ\u0026ixlib=rb-1.2.1\u0026q=80\u0026w=400","thumb":"https://images.unsplash.com/photo-1610159945493-a2ae39c4e010?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=MnwzMzY4Njd8MHwxfHNlYXJjaHwxfHx0ZW1wZSUyQ2F6fGVufDB8fHx8MTY1NDk3OTgzOQ\u0026ixlib=rb-1.2.1\u0026q=80\u0026w=200","small_s3":"https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1610159945493-a2ae39c4e010"},"links":{"self":"https://api.unsplash.com/photos/x16hh-bt9r4","html":"https://unsplash.com/photos/x16hh-bt9r4","download":"https://unsplash.com/photos/x16hh-bt9r4/download?ixid=MnwzMzY4Njd8MHwxfHNlYXJjaHwxfHx0ZW1wZSUyQ2F6fGVufDB8fHx8MTY1NDk3OTgzOQ","download_location":"https://api.unsplash.com/photos/x16hh-bt9r4/download?ixid=MnwzMzY4Njd8MHwxfHNlYXJjaHwxfHx0ZW1wZSUyQ2F6fGVufDB8fHx8MTY1NDk3OTgzOQ"},"categories":[],"likes":4,"liked_by_user":false,"current_user_collections":[],"sponsorship":null,"topic_submissions":{},"user":{"id":"SLgRlAQLswE","updated_at":"2022-06-09T12:41:01-04:00","username":"city_child","name":"Joan
+        Kwamboka","first_name":"Joan","last_name":"Kwamboka","twitter_username":null,"portfolio_url":null,"bio":null,"location":null,"links":{"self":"https://api.unsplash.com/users/city_child","html":"https://unsplash.com/@city_child","photos":"https://api.unsplash.com/users/city_child/photos","likes":"https://api.unsplash.com/users/city_child/likes","portfolio":"https://api.unsplash.com/users/city_child/portfolio","following":"https://api.unsplash.com/users/city_child/following","followers":"https://api.unsplash.com/users/city_child/followers"},"profile_image":{"small":"https://images.unsplash.com/profile-1610819702053-66cede7f6ae7image?ixlib=rb-1.2.1\u0026crop=faces\u0026fit=crop\u0026w=32\u0026h=32","medium":"https://images.unsplash.com/profile-1610819702053-66cede7f6ae7image?ixlib=rb-1.2.1\u0026crop=faces\u0026fit=crop\u0026w=64\u0026h=64","large":"https://images.unsplash.com/profile-1610819702053-66cede7f6ae7image?ixlib=rb-1.2.1\u0026crop=faces\u0026fit=crop\u0026w=128\u0026h=128"},"instagram_username":null,"total_collections":0,"total_likes":10,"total_photos":12,"accepted_tos":true,"for_hire":false,"social":{"instagram_username":null,"portfolio_url":null,"twitter_username":null,"paypal_email":null}},"tags":[{"type":"search","title":"tempe"},{"type":"search","title":"az"}]}]}'
+  recorded_at: Sat, 11 Jun 2022 20:37:19 GMT
+recorded_with: VCR 6.1.0
