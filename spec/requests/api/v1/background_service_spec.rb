@@ -11,7 +11,6 @@ RSpec.describe 'Get Backgrounds Endpoint' do
     expect(response.status).to eq(200)
 
     full_response = JSON.parse(response.body, symbolize_names: true)
-
     expect(full_response).to have_key(:data)
     expect(full_response).to have_key(:id)
     expect(full_response).to have_key(:attributes)
