@@ -12,13 +12,20 @@ RSpec.describe 'Get Backgrounds Endpoint' do
 
     full_response = JSON.parse(response.body, symbolize_names: true)
     expect(full_response).to have_key(:data)
-    expect(full_response).to have_key(:id)
-    expect(full_response).to have_key(:attributes)
+    expect(full_response[:data]).to have_key(:id)
+    expect(full_response[:data]).to have_key(:attributes)
 
-    background = full_response[:attributes]
+    background = full_response[:data][:attributes]
     expect(background).to be_a Hash
     expect(background).to have_key(:image)
     expect(background[:image]).to have_key(:location)
     expect(background[:image]).to have_key(:image_url)
+    expect(background[:image]).to have_key(:area)
+    expect(background[:image]).to have_key(:description)
+
+    expect(background[:image]).to have_key(:credit)
+    expect(background[:image][:credit]).to have_key(:source)
+    expect(background[:image][:credit]).to have_key(:author)
+
   end
 end
