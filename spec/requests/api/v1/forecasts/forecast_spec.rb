@@ -55,9 +55,15 @@ RSpec.describe 'Get Forecast Endpoint' do
       expect(response).to be_successful
       expect(response.status).to eq(200)
 
-      raw_forecast = JSON.parse(response.body, symbolize_names: true)
+      forecast = JSON.parse(response.body, symbolize_names: true)[:data]
 
+      expect(forecast[:attributes]).to have_key(:daily_weather)
+      
+      daily = forecast[:attributes][:daily_weather]
+      
+      expect(daily).to be_an Array
       binding.pry
+      expect(daily.count).to eq(5)
 
   end 
 end 

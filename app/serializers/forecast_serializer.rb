@@ -20,7 +20,7 @@ class ForecastSerializer
             "conditions": forecast[:current][:weather][0][:main],
             "icon": forecast[:current][:weather][0][:icon]
             },
-          "daily_weather":  [ forecast[:daily].shift(5).map do |day| 
+          "daily_weather":  forecast[:daily].shift(5).map do |day| 
             {
               "datetime": Time.at(day[:dt]),
               "sunrise": Time.at(day[:sunrise]),
@@ -31,8 +31,7 @@ class ForecastSerializer
               "icon": day[:weather][0][:icon] 
             }
           end, 
-          ],
-          "hourly_weather": [ forecast[:hourly].shift(8).map do |hour|
+          "hourly_weather":  forecast[:hourly].shift(8).map do |hour|
              {
               "time": Time.at(hour[:dt]).strftime('%H:%M'),
               "temp": hour[:temp],
@@ -40,7 +39,6 @@ class ForecastSerializer
               "icon": hour[:weather][0][:icon] 
            }
           end,
-          ]
         }
       }
     }
