@@ -36,7 +36,7 @@ RSpec.describe 'Get Backgrounds Endpoint' do
       headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
       city = ''
 
-      get '/api/v1/forecast', headers: headers, params: { location: city }
+      get '/api/v1/backgrounds', headers: headers, params: { location: city }
 
       expect(response.status).to eq(404)
 
