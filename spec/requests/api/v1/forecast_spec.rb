@@ -27,12 +27,24 @@ RSpec.describe 'Get Forecast Endpoint' do
       expect(attributes[:current_weather]).to have_key(:datetime)
       expect(attributes[:current_weather]).to have_key(:sunrise)
       expect(attributes[:current_weather]).to have_key(:sunset)
+      expect(attributes[:current_weather]).to have_key(:temperature)
+      expect(attributes[:current_weather][:temperature]).to be_a Float
+      
       expect(attributes[:current_weather]).to have_key(:feelsLike)
+      expect(attributes[:current_weather][:feelsLike]).to be_a Float
+  
       expect(attributes[:current_weather]).to have_key(:humidity)
+      expect(attributes[:current_weather][:humidity]).to be_an Integer
+
       expect(attributes[:current_weather]).to have_key(:uvi)
+      expect(attributes[:current_weather][:uvi]).to be_an Float
+
       expect(attributes[:current_weather]).to have_key(:visibility)
+      expect(attributes[:current_weather][:visibility]).to be_an Integer
+
       expect(attributes[:current_weather]).to have_key(:conditions)
       expect(attributes[:current_weather]).to have_key(:icon)
+      expect(attributes[:current_weather][:icon]).to be_a String
 
       expect(attributes[:current_weather]).to_not have_key(:clouds)
       expect(attributes[:current_weather]).to_not have_key(:windspeed)
@@ -70,9 +82,13 @@ RSpec.describe 'Get Forecast Endpoint' do
         expect(day).to have_key(:sunrise)
         expect(day).to have_key(:sunset)
         expect(day).to have_key(:max_temp)
+        expect(day[:max_temp]).to be_a Float
         expect(day).to have_key(:min_temp)
+        expect(day[:min_temp]).to be_a Float
+
         expect(day).to have_key(:conditions)
         expect(day).to have_key(:icon)
+        expect(day[:icon]).to be_a String
 
         expect(day).to_not have_key(:moon_phase)
         expect(day).to_not have_key(:moonrise)
@@ -119,8 +135,12 @@ RSpec.describe 'Get Forecast Endpoint' do
       hourly.each do |hour|
         expect(hour).to have_key(:time)
         expect(hour).to have_key(:temp)
+        expect(hour[:temp]).to be_a Float
+
         expect(hour).to have_key(:conditions)
         expect(hour).to have_key(:icon)
+        expect(hour[:icon]).to be_a String
+
 
         expect(hour).to_not have_key(:datetime)
         expect(hour).to_not have_key(:feels_like)
