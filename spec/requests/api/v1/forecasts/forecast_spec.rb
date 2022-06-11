@@ -41,6 +41,7 @@ RSpec.describe 'Get Forecast Endpoint' do
       expect(attributes[:current_weather]).to_not have_key(:wind_deg)
       expect(attributes[:current_weather]).to_not have_key(:wind_gust)
       expect(attributes[:current_weather]).to_not have_key(:weather)
+      expect(attributes[:current_weather]).to_not have_key(:pop)
     end 
   end 
 
@@ -72,6 +73,25 @@ RSpec.describe 'Get Forecast Endpoint' do
         expect(day).to have_key(:min_temp)
         expect(day).to have_key(:conditions)
         expect(day).to have_key(:icon)
+
+        expect(day).to_not have_key(:moon_phase)
+        expect(day).to_not have_key(:moonrise)
+        expect(day).to_not have_key(:moonset)
+        expect(day).to_not have_key(:feels_like)
+        expect(day).to_not have_key(:pressure)
+        expect(day).to_not have_key(:humidity)
+        expect(day).to_not have_key(:dew_point)
+        expect(day).to_not have_key(:wind_speed)
+        expect(day).to_not have_key(:wind_deg)
+        expect(day).to_not have_key(:wind_gust)
+        expect(day).to_not have_key(:weather)
+        expect(day).to_not have_key(:clouds)
+        expect(day).to_not have_key(:uvi)
+        expect(day).to_not have_key(:pop)
+        expect(day).to_not have_key(:day)
+        expect(day).to_not have_key(:night)
+        expect(day).to_not have_key(:eve)
+        expect(day).to_not have_key(:morn)
       end 
     end 
   end 
@@ -101,6 +121,20 @@ RSpec.describe 'Get Forecast Endpoint' do
         expect(hour).to have_key(:temp)
         expect(hour).to have_key(:conditions)
         expect(hour).to have_key(:icon)
+
+        expect(hour).to_not have_key(:datetime)
+        expect(hour).to_not have_key(:feels_like)
+        expect(hour).to_not have_key(:pressure)
+        expect(hour).to_not have_key(:humidity)
+        expect(hour).to_not have_key(:dew_point)
+        expect(hour).to_not have_key(:uvi)
+        expect(hour).to_not have_key(:clouds)
+        expect(hour).to_not have_key(:visibility)
+        expect(hour).to_not have_key(:wind_speed)
+        expect(hour).to_not have_key(:wind_deg)
+        expect(hour).to_not have_key(:wind_gust)
+        expect(hour).to_not have_key(:weather)
+        expect(hour).to_not have_key(:pop)
       end 
     end 
   end 
