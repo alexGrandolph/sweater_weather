@@ -67,17 +67,17 @@ http_interactions:
       Accept-Ranges:
       - bytes
       Date:
-      - Sat, 11 Jun 2022 19:04:24 GMT
+      - Sat, 11 Jun 2022 21:00:57 GMT
       Age:
-      - '0'
+      - '6994'
       X-Served-By:
-      - cache-iad-kjyo7100127-IAD, cache-den8280-DEN
+      - cache-iad-kjyo7100127-IAD, cache-den8236-DEN
       X-Cache:
-      - MISS, MISS
+      - MISS, HIT
       X-Cache-Hits:
-      - 0, 0
+      - 0, 1
       X-Timer:
-      - S1654974264.051621,VS0,VE106
+      - S1654981258.997713,VS0,VE1
       Vary:
       - Accept-Encoding, Origin,Authorization,Accept-Language,client-geo-region,Accept
     body:
@@ -87,5 +87,5 @@ http_interactions:
         Tan","first_name":"Andre","last_name":"Tan","twitter_username":"andredantan","portfolio_url":"https://www.cocomediaproduction.com","bio":"Enjoy
         the visuals!","location":"Miami, FL","links":{"self":"https://api.unsplash.com/users/andredantan19","html":"https://unsplash.com/@andredantan19","photos":"https://api.unsplash.com/users/andredantan19/photos","likes":"https://api.unsplash.com/users/andredantan19/likes","portfolio":"https://api.unsplash.com/users/andredantan19/portfolio","following":"https://api.unsplash.com/users/andredantan19/following","followers":"https://api.unsplash.com/users/andredantan19/followers"},"profile_image":{"small":"https://images.unsplash.com/profile-1538930485085-f04396bdb78f?ixlib=rb-1.2.1\u0026crop=faces\u0026fit=crop\u0026w=32\u0026h=32","medium":"https://images.unsplash.com/profile-1538930485085-f04396bdb78f?ixlib=rb-1.2.1\u0026crop=faces\u0026fit=crop\u0026w=64\u0026h=64","large":"https://images.unsplash.com/profile-1538930485085-f04396bdb78f?ixlib=rb-1.2.1\u0026crop=faces\u0026fit=crop\u0026w=128\u0026h=128"},"instagram_username":"andredantan","total_collections":0,"total_likes":206,"total_photos":241,"accepted_tos":true,"for_hire":true,"social":{"instagram_username":"andredantan","portfolio_url":"https://www.cocomediaproduction.com","twitter_username":"andredantan","paypal_email":null}},"tags":[{"type":"search","title":"miami
         beach"},{"type":"search","title":"usa"},{"type":"search","title":"fl"}]}]}'
-  recorded_at: Sat, 11 Jun 2022 19:04:24 GMT
+  recorded_at: Sat, 11 Jun 2022 21:00:58 GMT
 recorded_with: VCR 6.1.0

@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Background do
   it 'exists and has readable attributes', :vcr do
-    data = BackgroundService.get_background_for_location('miami,fl')[:results][0]
+    data = BackgroundService.get_background_for_location('miami,fl')
     
     background = Background.new(data)
 

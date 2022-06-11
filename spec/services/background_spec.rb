@@ -7,16 +7,13 @@ RSpec.describe BackgroundService do
     response = BackgroundService.get_background_for_location('miami,fl')
 
     expect(response).to be_a Hash
-    expect(response).to have_key(:results)
-    expect(response[:results]).to be_an Array
-    expect(response[:results].count).to eq(1)
+  
+    expect(response).to have_key(:urls)
+    expect(response[:urls]).to have_key(:full)
 
-    expect(response[:results][0]).to have_key(:urls)
-    expect(response[:results][0][:urls]).to have_key(:full)
-
-    expect(response[:results][0]).to have_key(:user)
-    expect(response[:results][0][:user]).to have_key(:location)
-    expect(response[:results][0][:user]).to have_key(:name)
+    expect(response).to have_key(:user)
+    expect(response[:user]).to have_key(:location)
+    expect(response[:user]).to have_key(:name)
 
 
   end 
