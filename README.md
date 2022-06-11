@@ -24,7 +24,7 @@
           "sunset": "2020-10-01 16:10:43 -0600",
           "max_temp": 306.27, *IN FARENHEIT*
           "min_temp": 306.27, *IN FARENHEIT*
-          "description": "clouds" 
+          "conditions": "clouds" 
           },
         {next day} etc
       ],

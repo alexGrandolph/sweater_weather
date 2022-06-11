@@ -11,9 +11,14 @@ RSpec.describe 'Get Forecast Endpoint' do
     expect(response).to be_successful
     expect(response.status).to eq(200)
 
-    forecast = JSON.parse(response.body, symbolize_names: true)
-
+    raw_forecast = JSON.parse(response.body, symbolize_names: true)
+    expect(raw_forecast).to have_key(:data)
+    
+    forecast = raw_forecast[:data]
+    
     expect(forecast).to be_a Hash
+    expect(forecast).to have_key(:id)
+    expect(forecast[:type]).to eq('forecast')
   end 
 
 
