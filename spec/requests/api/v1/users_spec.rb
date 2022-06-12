@@ -12,6 +12,7 @@ RSpec.describe 'Users Endpoint' do
     post '/api/v1/users', headers: headers, params: JSON.generate(payload)
 
     result = JSON.parse(response.body, symbolize_names: true)
+    # binding.pry
     expect(response).to be_successful
     expect(response.status).to eq(201)
 
