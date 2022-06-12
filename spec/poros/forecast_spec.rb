@@ -1,19 +1,19 @@
 require 'rails_helper'
 
-RSpec.describe CurrentForecast do
+RSpec.describe Forecast do
 
-    it 'exists and has readable attributes', :vcr do
+  it 'exists and has readable attributes', :vcr do
     lat = 42.358894
     long = -71.056742
     data = ForecastService.forecast_by_lat_long(lat, long)
 
-    current = CurrentForecast.new(data)
-    expect(current).to be_a CurrentForecast
+    current = Forecast.new(data)
+    expect(current).to be_a Forecast
     expect(current.datetime).to be_a String 
     expect(current.sunrise).to be_a String
     expect(current.sunset).to be_a String 
-    expect(current.temp).to eq(70.81)
-    expect(current.feels_like).to eq(70.93)
+    expect(current.temp).to eq(70.66)
+    expect(current.feels_like).to eq(70.77)
     expect(current.humidity).to eq(71)
     expect(current.uvi).to eq(0)
     expect(current.visibility).to eq(10000)

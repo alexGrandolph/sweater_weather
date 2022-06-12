@@ -1,5 +1,5 @@
-class CurrentForecast
-  attr_reader :datetime, :sunrise, :sunset, :temp, :feels_like, :humidity, :uvi, :visibility, :conditions, :icon
+class Forecast
+  attr_reader :datetime, :sunrise, :sunset, :temp, :feels_like, :humidity, :uvi, :visibility, :conditions, :icon, :daily
 
 
   def initialize(attributes)
