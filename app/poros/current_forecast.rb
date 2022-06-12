@@ -3,16 +3,18 @@ class CurrentForecast
 
 
   def initialize(attributes)
-    @datetime = Time.at(attributes[:dt])
-    @sunrise = Time.at(attributes[:sunrise])
-    @sunset = Time.at(attributes[:sunset])
-    @temp = attributes[:temp]
-    @feels_like = attributes[:feels_like]
-    @humidity = attributes[:humidity]
-    @uvi = attributes[:uvi]
-    @visibility = attributes[:visibility]
-    @conditions = attributes[:weather][0][:main]
-    @icon = attributes[:weather][0][:icon]
+ 
+    @datetime = Time.at(attributes[:current][:dt]).to_s
+    @sunrise = Time.at(attributes[:current][:sunrise]).to_s
+    @sunset = Time.at(attributes[:current][:sunset]).to_s
+    @temp = attributes[:current][:temp]
+    @feels_like = attributes[:current][:feels_like]
+    @humidity = attributes[:current][:humidity]
+    @uvi = attributes[:current][:uvi]
+    @visibility = attributes[:current][:visibility]
+    @conditions = attributes[:current][:weather][0][:main]
+    @icon = attributes[:current][:weather][0][:icon]
+    @daily = attributes[:daily].map { |day| DailyForecast.new(day) }
   end 
 
 
