@@ -42,7 +42,7 @@ RSpec.describe 'Get Book-Search Endpoint' do
     end
   end 
   describe 'Sad Path' do
-    it 'giving bad parameters results in error response', :vcr do
+    it 'giving quantity less than or equal to zero results in quantity error response', :vcr do
 
       headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
       city = 'seattle,wa'
@@ -56,11 +56,20 @@ RSpec.describe 'Get Book-Search Endpoint' do
 
       expect(result[:data][:error]).to have_key(:message)
       expect(result[:data][:error][:message]).to eq("Quantity must be a positive integer greater than zero")
-
-
     end 
+    it 'giving empty location results in empty location error response', :vcr do
 
+      headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
+      city = ''
+      get '/api/v1/book-search', headers: headers, params: { location: city, quantity: -5 }
 
+      result = JSON.parse(response.body, symbolize_names: true)
+      
+      expect(result).to have_key(:data)
+      expect(result[:data]).to have_key(:error)
+
+      expect(result[:data][:error]).to have_key(:message)
+      expect(result[:data][:error][:message]).to eq("Location parameter cannot be blank")
 
 
 

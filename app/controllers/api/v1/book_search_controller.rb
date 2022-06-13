@@ -2,7 +2,6 @@ class Api::V1::BookSearchController < ApplicationController
 
 
   def index
-    # binding.pry
     if params[:quantity].to_i <= 0
       render json: ErrorSerializer.bad_quantity
 
