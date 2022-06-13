@@ -46,15 +46,14 @@ RSpec.describe 'Users Endpoint' do
       }
 
       post '/api/v1/users', headers: headers, params: JSON.generate(payload)
-      expect(response.status).to eq(401)
+      expect(response.status).to eq(422)
 
       result = JSON.parse(response.body, symbolize_names: true)
       
-      expect(result).to have_key(:data)
-      expect(result[:data]).to have_key(:error)
+      expect(result).to have_key(:errors)
+      expect(result[:errors]).to have_key(:password)
 
-      expect(result[:data][:error]).to have_key(:message)
-      expect(result[:data][:error][:message]).to eq("Passwords do not match")
+      expect(result[:errors][:password]).to eq(["Passwords do not match"])
     end 
 
     it 'returns a user already exists error if email is already in database', :vcr do
@@ -71,15 +70,15 @@ RSpec.describe 'Users Endpoint' do
       }
 
       post '/api/v1/users', headers: headers, params: JSON.generate(payload)
-      expect(response.status).to eq(401)
+      expect(response.status).to eq(422)
 
       result = JSON.parse(response.body, symbolize_names: true)
-      
-      expect(result).to have_key(:data)
-      expect(result[:data]).to have_key(:error)
+      # binding.pry
+      expect(result).to have_key(:errors)
+      expect(result[:errors]).to have_key(:email)
 
-      expect(result[:data][:error]).to have_key(:message)
-      expect(result[:data][:error][:message]).to eq("Email already exists")
+      expect(result[:errors][:email]).to eq(["has already been taken"])
+
     end 
 
 

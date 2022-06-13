@@ -32,11 +32,11 @@ class ErrorSerializer
   end 
 
   def self.password_mismatch
-    { "data":
+    { "errors":
       {
-        "error": {
-          "message": 'Passwords do not match'
-        }
+        "password": 
+         ['Passwords do not match']
+        
       }      
     }
   end
