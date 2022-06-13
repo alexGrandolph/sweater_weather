@@ -45,6 +45,7 @@ RSpec.describe 'Users Endpoint' do
       }
 
       post '/api/v1/users', headers: headers, params: JSON.generate(payload)
+      expect(response.status).to eq(401)
 
       result = JSON.parse(response.body, symbolize_names: true)
       
