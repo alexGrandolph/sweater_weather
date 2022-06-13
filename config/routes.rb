@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
       post '/users', to: 'users#create'
 
-
+      get '/book-search', to: 'book_search#index'
     end 
   end 
 end

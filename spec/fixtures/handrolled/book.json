@@ -1,0 +1,104 @@
+      {
+        "key": "/works/OL8286499W",
+        "type": "work",
+        "seed": [
+          "/books/OL2482594M",
+          "/books/OL7703796M",
+          "/books/OL7681452M",
+          "/works/OL8286499W",
+          "/subjects/buildings_structures",
+          "/subjects/pictorial_works",
+          "/authors/OL2754228A"
+        ],
+        "title": "Denver",
+        "title_suggest": "Denver",
+        "has_fulltext": false,
+        "edition_count": 3,
+        "edition_key": [
+          "OL2482594M",
+          "OL7703796M",
+          "OL7681452M"
+        ],
+        "publish_date": [
+          "1987",
+          "December 12, 1988",
+          "August 27, 1987"
+        ],
+        "publish_year": [
+          1987,
+          1988
+        ],
+        "first_publish_year": 1987,
+        "number_of_pages_median": 64,
+        "lccn": [
+          "87403040"
+        ],
+        "publish_place": [
+          "New York"
+        ],
+        "contributor": [
+          "Crescent Books."
+        ],
+        "lcc": [
+          "F--0784.00000000.D443 D46 1987"
+        ],
+        "ddc": [
+          "978.883033"
+        ],
+        "isbn": [
+          "0517215039",
+          "9780517623619",
+          "9780517215036",
+          "0517623617"
+        ],
+        "last_modified_i": 1604743091,
+        "ebook_count_i": 0,
+        "publisher": [
+          "Crescent Books",
+          "Random House Value Publishing",
+          "Distributed by Crown Publishers",
+          "Crescent"
+        ],
+        "language": [
+          "eng"
+        ],
+        "author_key": [
+          "OL2754228A"
+        ],
+        "author_name": [
+          "RH Value Publishing"
+        ],
+        "author_alternative_name": [
+          "Rh Value Publishing",
+          "Random House Value Publishing",
+          "Value Publishing Rh",
+          "Value Publ Rh"
+        ],
+        "subject": [
+          "Buildings, structures",
+          "Pictorial works"
+        ],
+        "id_goodreads": [
+          "3962328"
+        ],
+        "publisher_facet": [
+          "Crescent",
+          "Crescent Books",
+          "Distributed by Crown Publishers",
+          "Random House Value Publishing"
+        ],
+        "subject_facet": [
+          "Buildings, structures",
+          "Pictorial works"
+        ],
+        "_version_": 1715096654852390912,
+        "lcc_sort": "F--0784.00000000.D443 D46 1987",
+        "author_facet": [
+          "OL2754228A RH Value Publishing"
+        ],
+        "subject_key": [
+          "buildings_structures",
+          "pictorial_works"
+        ],
+        "ddc_sort": "978.883033"
+      }
