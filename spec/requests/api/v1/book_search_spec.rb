@@ -43,7 +43,7 @@ RSpec.describe 'Get Book-Search Endpoint' do
   end 
 
   describe 'Sad Path' do
-    
+
     it 'giving quantity less than or equal to zero results in quantity error response', :vcr do
 
       headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
@@ -73,6 +73,24 @@ RSpec.describe 'Get Book-Search Endpoint' do
 
       expect(result[:data][:error]).to have_key(:message)
       expect(result[:data][:error][:message]).to eq("Location parameter cannot be blank")
+    end 
+
+    it 'Returns an error message if no book results found for location', :vcr do
+
+      headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
+      city = 'brisket'
+      get '/api/v1/book-search', headers: headers, params: { location: city, quantity: 5 }
+
+      result = JSON.parse(response.body, symbolize_names: true)
+
+      binding.pry
+
+      expect(result).to have_key(:data)
+      expect(result[:data]).to have_key(:error)
+
+      expect(result[:data][:error]).to have_key(:message)
+      expect(result[:data][:error][:message]).to eq("No book matches for given location")
+
     end 
 
   end
