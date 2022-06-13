@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Get Book-Search Endpoint' do
-  it 'returns a JSON respones contaning books backing search parameters' do
+  it 'returns a JSON respones contaning books backing search parameters', :vcr do
     headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
     city = 'boston,ma'
     get '/api/v1/book-search', headers: headers, params: { location: city, quantity: 5 }
