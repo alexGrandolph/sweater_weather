@@ -1,0 +1,777 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://openlibrary.org/search.json?fields=*,availability&limit=5&q=boston,ma
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.18.0 (Ubuntu)
+      Date:
+      - Mon, 13 Jun 2022 15:51:58 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - GET, OPTIONS
+      Access-Control-Max-Age:
+      - '86400'
+      X-Ol-Stats:
+      - '"SR 1 0.188 TT 0 0.391"'
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "numFound": 23742,
+            "start": 0,
+            "numFoundExact": true,
+            "docs": [
+                {
+                    "key": "/works/OL8290304W",
+                    "type": "work",
+                    "seed": [
+                        "/books/OL9645663M",
+                        "/works/OL8290304W",
+                        "/authors/OL2754912A"
+                    ],
+                    "title": "Boston, Ma",
+                    "title_suggest": "Boston, Ma",
+                    "has_fulltext": false,
+                    "edition_count": 1,
+                    "edition_key": [
+                        "OL9645663M"
+                    ],
+                    "publish_date": [
+                        "December 2003"
+                    ],
+                    "publish_year": [
+                        2003
+                    ],
+                    "first_publish_year": 2003,
+                    "isbn": [
+                        "9780841624849",
+                        "0841624844"
+                    ],
+                    "last_modified_i": 1341770500,
+                    "ebook_count_i": 0,
+                    "cover_edition_key": "OL9645663M",
+                    "cover_i": 1589715,
+                    "publisher": [
+                        "Langenscheidt Publishers"
+                    ],
+                    "language": [
+                        "eng"
+                    ],
+                    "author_key": [
+                        "OL2754912A"
+                    ],
+                    "author_name": [
+                        "American Map Corporation"
+                    ],
+                    "publisher_facet": [
+                        "Langenscheidt Publishers"
+                    ],
+                    "_version_": 1715096705879244800,
+                    "author_facet": [
+                        "OL2754912A American Map Corporation"
+                    ]
+                },
+                {
+                    "key": "/works/OL899437W",
+                    "type": "work",
+                    "seed": [
+                        "/books/OL10945166M",
+                        "/works/OL899437W",
+                        "/authors/OL79165A"
+                    ],
+                    "title": "Lowell, MA and Boston, MA: Boston, MA",
+                    "title_suggest": "Lowell, MA and Boston, MA: Boston, MA",
+                    "subtitle": "42071, digital raster graphic data",
+                    "has_fulltext": false,
+                    "edition_count": 1,
+                    "edition_key": [
+                        "OL10945166M"
+                    ],
+                    "publish_date": [
+                        "1996"
+                    ],
+                    "publish_year": [
+                        1996
+                    ],
+                    "first_publish_year": 1996,
+                    "isbn": [
+                        "0607620196",
+                        "9780607620191"
+                    ],
+                    "last_modified_i": 1272517844,
+                    "ebook_count_i": 0,
+                    "publisher": [
+                        "USGS Branch of Distribution"
+                    ],
+                    "language": [
+                        "eng"
+                    ],
+                    "author_key": [
+                        "OL79165A"
+                    ],
+                    "author_name": [
+                        "United States Geological Survey"
+                    ],
+                    "author_alternative_name": [
+                        "United States. Geological survey.",
+                        "Geological Survey. (U.S.)",
+                        "Geological Survey (U. S.)",
+                        "Geological Survey (U .S.)",
+                        "Geological Survey (U.S.) 088",
+                        "U.S. Geological Survey",
+                        "United States. Geological Survey",
+                        "United States. Geological Survey.",
+                        "Geological Survey (U.S.)"
+                    ],
+                    "publisher_facet": [
+                        "USGS Branch of Distribution"
+                    ],
+                    "_version_": 1715097417743859712,
+                    "author_facet": [
+                        "OL79165A United States Geological Survey"
+                    ]
+                },
+                {
+                    "key": "/works/OL8290330W",
+                    "type": "work",
+                    "seed": [
+                        "/books/OL8227587M",
+                        "/works/OL8290330W",
+                        "/authors/OL2754912A"
+                    ],
+                    "title": "Downtown Boston, MA",
+                    "title_suggest": "Downtown Boston, MA",
+                    "has_fulltext": false,
+                    "edition_count": 1,
+                    "edition_key": [
+                        "OL8227587M"
+                    ],
+                    "publish_date": [
+                        "July 15, 2005"
+                    ],
+                    "publish_year": [
+                        2005
+                    ],
+                    "first_publish_year": 2005,
+                    "oclc": [
+                        "149626819"
+                    ],
+                    "isbn": [
+                        "0841655766",
+                        "9780841655768"
+                    ],
+                    "last_modified_i": 1304017007,
+                    "ebook_count_i": 0,
+                    "cover_edition_key": "OL8227587M",
+                    "cover_i": 1589823,
+                    "publisher": [
+                        "American Map Corporation"
+                    ],
+                    "language": [
+                        "eng"
+                    ],
+                    "author_key": [
+                        "OL2754912A"
+                    ],
+                    "author_name": [
+                        "American Map Corporation"
+                    ],
+                    "id_goodreads": [
+                        "2306154"
+                    ],
+                    "publisher_facet": [
+                        "American Map Corporation"
+                    ],
+                    "_version_": 1715096705887633408,
+                    "author_facet": [
+                        "OL2754912A American Map Corporation"
+                    ]
+                },
+                {
+                    "key": "/works/OL12084376M",
+                    "type": "work",
+                    "seed": [
+                        "/books/OL12084376M",
+                        "/works/OL12084376M",
+                        "/subjects/maps_&_road_atlases",
+                        "/subjects/travel",
+                        "/subjects/maps"
+                    ],
+                    "title": "Boston, Ma Map",
+                    "title_suggest": "Boston, Ma Map",
+                    "has_fulltext": false,
+                    "edition_count": 1,
+                    "edition_key": [
+                        "OL12084376M"
+                    ],
+                    "publish_date": [
+                        "August 2002"
+                    ],
+                    "publish_year": [
+                        2002
+                    ],
+                    "first_publish_year": 2002,
+                    "isbn": [
+                        "9781557519788",
+                        "1557519781"
+                    ],
+                    "last_modified_i": 1635645752,
+                    "ebook_count_i": 0,
+                    "publisher": [
+                        "Arrow Map"
+                    ],
+                    "subject": [
+                        "Maps & Road Atlases",
+                        "Travel",
+                        "Maps"
+                    ],
+                    "publisher_facet": [
+                        "Arrow Map"
+                    ],
+                    "subject_facet": [
+                        "Maps",
+                        "Maps & Road Atlases",
+                        "Travel"
+                    ],
+                    "_version_": 1715098881901985794,
+                    "subject_key": [
+                        "maps",
+                        "maps__road_atlases",
+                        "travel"
+                    ]
+                },
+                {
+                    "key": "/works/OL13701047W",
+                    "type": "work",
+                    "seed": [
+                        "/books/OL23315176M",
+                        "/books/OL23315307M",
+                        "/books/OL23315190M",
+                        "/books/OL23333422M",
+                        "/books/OL23333417M",
+                        "/books/OL23315122M",
+                        "/books/OL23315338M",
+                        "/books/OL23315120M",
+                        "/books/OL23364785M",
+                        "/books/OL23315295M",
+                        "/books/OL23315299M",
+                        "/books/OL23315180M",
+                        "/books/OL23315341M",
+                        "/books/OL23315198M",
+                        "/books/OL23315256M",
+                        "/books/OL23315301M",
+                        "/books/OL23315214M",
+                        "/books/OL23315162M",
+                        "/books/OL23315102M",
+                        "/books/OL23315231M",
+                        "/books/OL23315332M",
+                        "/books/OL23364786M",
+                        "/books/OL23315159M",
+                        "/books/OL23315167M",
+                        "/books/OL23333416M",
+                        "/books/OL24611458M",
+                        "/books/OL23315312M",
+                        "/books/OL23315222M",
+                        "/books/OL23315287M",
+                        "/books/OL23315263M",
+                        "/books/OL23315191M",
+                        "/books/OL23315316M",
+                        "/books/OL23315267M",
+                        "/books/OL23315229M",
+                        "/books/OL23315311M",
+                        "/books/OL23315103M",
+                        "/books/OL23315290M",
+                        "/books/OL23315239M",
+                        "/books/OL23315201M",
+                        "/books/OL23333420M",
+                        "/books/OL23315123M",
+                        "/books/OL23315207M",
+                        "/books/OL23315334M",
+                        "/books/OL23315224M",
+                        "/books/OL23315261M",
+                        "/books/OL23315101M",
+                        "/books/OL23315200M",
+                        "/books/OL23315230M",
+                        "/books/OL23315326M",
+                        "/books/OL23315339M",
+                        "/books/OL23315116M",
+                        "/books/OL23315280M",
+                        "/books/OL23315240M",
+                        "/books/OL23315216M",
+                        "/books/OL23315245M",
+                        "/books/OL23315174M",
+                        "/books/OL23315171M",
+                        "/books/OL23315168M",
+                        "/books/OL23315258M",
+                        "/books/OL23315318M",
+                        "/books/OL24630167M",
+                        "/books/OL23315155M",
+                        "/books/OL23315228M",
+                        "/books/OL23315099M",
+                        "/books/OL23315121M",
+                        "/books/OL23315160M",
+                        "/books/OL23315218M",
+                        "/books/OL23315308M",
+                        "/books/OL23315166M",
+                        "/books/OL22885492M",
+                        "/books/OL23315188M",
+                        "/books/OL23315235M",
+                        "/books/OL23315275M",
+                        "/books/OL23315156M",
+                        "/books/OL23315183M",
+                        "/books/OL23315249M",
+                        "/books/OL23315242M",
+                        "/books/OL23315195M",
+                        "/books/OL23315215M",
+                        "/books/OL23333419M",
+                        "/books/OL23315177M",
+                        "/books/OL23315304M",
+                        "/books/OL23315161M",
+                        "/books/OL23315233M",
+                        "/books/OL23315329M",
+                        "/books/OL23315138M",
+                        "/books/OL23315114M",
+                        "/books/OL23315119M",
+                        "/books/OL23315210M",
+                        "/books/OL23315241M",
+                        "/books/OL23315157M",
+                        "/books/OL23315117M",
+                        "/works/OL13701047W",
+                        "/subjects/list_of_residents",
+                        "/subjects/voting_lists",
+                        "/authors/OL6554350A"
+                    ],
+                    "title": "List of residents. [title may vary]",
+                    "title_suggest": "List of residents. [title may vary]",
+                    "has_fulltext": true,
+                    "edition_count": 92,
+                    "edition_key": [
+                        "OL23315176M",
+                        "OL23315307M",
+                        "OL23315190M",
+                        "OL23333422M",
+                        "OL23333417M",
+                        "OL23315122M",
+                        "OL23315338M",
+                        "OL23315120M",
+                        "OL23364785M",
+                        "OL23315295M",
+                        "OL23315299M",
+                        "OL23315180M",
+                        "OL23315341M",
+                        "OL23315198M",
+                        "OL23315256M",
+                        "OL23315301M",
+                        "OL23315214M",
+                        "OL23315162M",
+                        "OL23315102M",
+                        "OL23315231M",
+                        "OL23315332M",
+                        "OL23364786M",
+                        "OL23315159M",
+                        "OL23315167M",
+                        "OL23333416M",
+                        "OL24611458M",
+                        "OL23315312M",
+                        "OL23315222M",
+                        "OL23315287M",
+                        "OL23315263M",
+                        "OL23315191M",
+                        "OL23315316M",
+                        "OL23315267M",
+                        "OL23315229M",
+                        "OL23315311M",
+                        "OL23315103M",
+                        "OL23315290M",
+                        "OL23315239M",
+                        "OL23315201M",
+                        "OL23333420M",
+                        "OL23315123M",
+                        "OL23315207M",
+                        "OL23315334M",
+                        "OL23315224M",
+                        "OL23315261M",
+                        "OL23315101M",
+                        "OL23315200M",
+                        "OL23315230M",
+                        "OL23315326M",
+                        "OL23315339M",
+                        "OL23315116M",
+                        "OL23315280M",
+                        "OL23315240M",
+                        "OL23315216M",
+                        "OL23315245M",
+                        "OL23315174M",
+                        "OL23315171M",
+                        "OL23315168M",
+                        "OL23315258M",
+                        "OL23315318M",
+                        "OL24630167M",
+                        "OL23315155M",
+                        "OL23315228M",
+                        "OL23315099M",
+                        "OL23315121M",
+                        "OL23315160M",
+                        "OL23315218M",
+                        "OL23315308M",
+                        "OL23315166M",
+                        "OL22885492M",
+                        "OL23315188M",
+                        "OL23315235M",
+                        "OL23315275M",
+                        "OL23315156M",
+                        "OL23315183M",
+                        "OL23315249M",
+                        "OL23315242M",
+                        "OL23315195M",
+                        "OL23315215M",
+                        "OL23333419M",
+                        "OL23315177M",
+                        "OL23315304M",
+                        "OL23315161M",
+                        "OL23315233M",
+                        "OL23315329M",
+                        "OL23315138M",
+                        "OL23315114M",
+                        "OL23315119M",
+                        "OL23315210M",
+                        "OL23315241M",
+                        "OL23315157M",
+                        "OL23315117M"
+                    ],
+                    "publish_date": [
+                        "uuuu"
+                    ],
+                    "number_of_pages_median": 1999,
+                    "last_modified_i": 1630679796,
+                    "ebook_count_i": 92,
+                    "ia": [
+                        "listofresidentst194912bost",
+                        "listofresidentst195010bost",
+                        "listofresidentst195018bost",
+                        "listofresidentst195012bost",
+                        "listofresidentst195021bost",
+                        "listofresidentst19484bost",
+                        "listofresidentst19475bost",
+                        "listofresidentst19489bost",
+                        "listofresidentst19494bost",
+                        "listofresidentst19468bost",
+                        "listofresidentst19482bost",
+                        "listofresidentst19505bost",
+                        "listofresidentst19472bost",
+                        "listofresidentst195019bost",
+                        "listofresidentst194711bost",
+                        "listofresidentst194714bost",
+                        "listofresidentst19502bost",
+                        "listofresidentst194920bost",
+                        "listofresidentst19508bost",
+                        "listofresidentst19477bost",
+                        "listofresidentst19497bost",
+                        "listofresidentst19486bost",
+                        "listofresidentst194717bost",
+                        "listofresidentst194914bost",
+                        "listofresidentst194816bost",
+                        "listofresidentst194817bost",
+                        "listofresidentst194720bost",
+                        "listofresidentst195022bost",
+                        "listofresidentst194601bost",
+                        "listofresidentst19481bost",
+                        "listofresidentst19483bost",
+                        "listofresidentst194813bost",
+                        "listofresidentst194716bost",
+                        "listofresidentst19478bost",
+                        "listofresidentst194916bost",
+                        "listofresidentst194918bost",
+                        "listofresidentst194814bost",
+                        "listofresidentst19509bost",
+                        "listofresidentst194913bost",
+                        "listofresidentst194919bost",
+                        "listofresidentst194819bost",
+                        "listofresidentst194811bost",
+                        "listofresidentst193502bost",
+                        "listofresidentst19473bost",
+                        "listofresidentst194910bost",
+                        "listofresidentst19501bost",
+                        "listofresidentst194710bost",
+                        "listofresidentst194922bost",
+                        "listofresidentst19479bost",
+                        "listofresidentst19495bost",
+                        "listofresidentst19487bost",
+                        "listofresidentst194715bost",
+                        "listofresidentst194812bost",
+                        "listofresidentst194921bost",
+                        "listofresidentst194815bost",
+                        "listofresidentst19498bost",
+                        "listofresidentst194719bost",
+                        "listofresidentst195014bost",
+                        "listofresidentst194917bost",
+                        "listofresidentst19476bost",
+                        "listofresidentst19493bost",
+                        "listofresidentst19499bost",
+                        "listofresidentst194821bost",
+                        "listofresidentst194911bost",
+                        "listofresidentst190901bost",
+                        "listofresidentst19471bost",
+                        "listofresidentst194810bost",
+                        "listofresidentst19503bost",
+                        "listofresidentst195011bost",
+                        "listofresidentst194818bost",
+                        "listofresidentst194820bost",
+                        "listofresidentst19492bost",
+                        "listofresidentst194722bost",
+                        "listofresidentst195013bost",
+                        "listofresidentst19474bost",
+                        "listofresidentst19496bost",
+                        "listofresidentst195020bost",
+                        "listofresidentst194721bost",
+                        "listofresidentst19506bost",
+                        "listofresidentst194713bost",
+                        "listofresidentst195015bost",
+                        "listofresidentst19485bost",
+                        "listofresidentst19507bost",
+                        "listofresidentst19488bost",
+                        "listofresidentst194718bost",
+                        "listofresidentst19504bost",
+                        "listofresidentst194915bost",
+                        "listofresidentst194822bost",
+                        "listofresidentst19491bost",
+                        "listofresidentst195017bost",
+                        "listofresidentst195016bost",
+                        "listofresidentst194712bost"
+                    ],
+                    "public_scan_b": true,
+                    "ia_collection_s": "fav-frankenbits;USGovernmentDocuments;americana;additional_collections;bostonpubliclibrary",
+                    "cover_edition_key": "OL23333416M",
+                    "cover_i": 6095506,
+                    "language": [
+                        "eng"
+                    ],
+                    "author_key": [
+                        "OL6554350A"
+                    ],
+                    "author_name": [
+                        "Boston, Massachusetts. Election Department."
+                    ],
+                    "subject": [
+                        "List of Residents",
+                        "Voting Lists",
+                        "Accessible book"
+                    ],
+                    "subject_facet": [
+                        "Accessible book",
+                        "List of Residents",
+                        "Voting Lists"
+                    ],
+                    "_version_": 1715077225383985244,
+                    "author_facet": [
+                        "OL6554350A Boston, Massachusetts. Election Department."
+                    ],
+                    "subject_key": [
+                        "accessible_book",
+                        "list_of_residents",
+                        "voting_lists"
+                    ],
+                    "availability": {
+                        "status": "open",
+                        "available_to_browse": false,
+                        "available_to_borrow": false,
+                        "available_to_waitlist": false,
+                        "is_printdisabled": false,
+                        "is_readable": true,
+                        "is_lendable": false,
+                        "is_previewable": true,
+                        "identifier": "listofresidentst194912bost",
+                        "isbn": null,
+                        "oclc": null,
+                        "openlibrary_work": "OL13701047W",
+                        "openlibrary_edition": "OL23315222M",
+                        "last_loan_date": null,
+                        "num_waitlist": null,
+                        "last_waitlist_date": null,
+                        "is_restricted": false,
+                        "is_browseable": false,
+                        "__src__": "core.models.lending.get_availability"
+                    }
+                }
+            ],
+            "num_found": 23742,
+            "q": "boston,ma",
+            "offset": null
+        }
+  recorded_at: Mon, 13 Jun 2022 15:51:58 GMT
+- request:
+    method: get
+    uri: http://www.mapquestapi.com/geocoding/v1/address?key=KNA7xXRRsxQJX1I4nhH8gXdk27FbXorC&location=boston,ma
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Mon, 13 Jun 2022 15:51:59 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '1029'
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET,POST
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 20 Dec 1998 01:00:00 GMT
+      Geocodetransactioncount:
+      - '1'
+      Last-Modified:
+      - Mon, 13 Jun 2022 15:51:59 GMT
+      Pragma:
+      - no-cache
+      Reversegeocodetransactioncount:
+      - '0'
+      Set-Cookie:
+      - JSESSIONID=88023B792710393AE03FA2F665F47032; Path=/; HttpOnly
+      Status:
+      - success
+      Transactionweight:
+      - '1.0'
+    body:
+      encoding: UTF-8
+      string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2022 MapQuest,
+        Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
+        2022 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"boston,ma"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Boston","adminArea5Type":"City","adminArea4":"Suffolk
+        County","adminArea4Type":"County","adminArea3":"MA","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282040344","unknownInput":"","type":"s","latLng":{"lat":42.358894,"lng":-71.056742},"displayLatLng":{"lat":42.358894,"lng":-71.056742},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=KNA7xXRRsxQJX1I4nhH8gXdk27FbXorC&type=map&size=225,160&locations=42.358894,-71.056742|marker-sm-50318A-1&scalebar=true&zoom=12&rand=271397676"}]}]}'
+  recorded_at: Mon, 13 Jun 2022 15:51:58 GMT
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/2.5/onecall?appid=4f63b483f8977ca5a2137c7a5059db46&lat=42.358894&lon=-71.056742&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Mon, 13 Jun 2022 15:51:59 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '19673'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/onecall?lat=42.36&lon=-71.06&units=imperial"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"lat":42.3589,"lon":-71.0567,"timezone":"America/New_York","timezone_offset":-14400,"current":{"dt":1655135519,"sunrise":1655111216,"sunset":1655166109,"temp":79.07,"feels_like":79.07,"pressure":1010,"humidity":64,"dew_point":65.86,"uvi":5.6,"clouds":75,"visibility":10000,"wind_speed":5.75,"wind_deg":270,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04d"}]},"minutely":[{"dt":1655135520,"precipitation":0},{"dt":1655135580,"precipitation":0},{"dt":1655135640,"precipitation":0},{"dt":1655135700,"precipitation":0},{"dt":1655135760,"precipitation":0},{"dt":1655135820,"precipitation":0},{"dt":1655135880,"precipitation":0},{"dt":1655135940,"precipitation":0},{"dt":1655136000,"precipitation":0},{"dt":1655136060,"precipitation":0},{"dt":1655136120,"precipitation":0},{"dt":1655136180,"precipitation":0},{"dt":1655136240,"precipitation":0},{"dt":1655136300,"precipitation":0},{"dt":1655136360,"precipitation":0},{"dt":1655136420,"precipitation":0},{"dt":1655136480,"precipitation":0},{"dt":1655136540,"precipitation":0},{"dt":1655136600,"precipitation":0},{"dt":1655136660,"precipitation":0},{"dt":1655136720,"precipitation":0},{"dt":1655136780,"precipitation":0},{"dt":1655136840,"precipitation":0},{"dt":1655136900,"precipitation":0},{"dt":1655136960,"precipitation":0},{"dt":1655137020,"precipitation":0},{"dt":1655137080,"precipitation":0},{"dt":1655137140,"precipitation":0},{"dt":1655137200,"precipitation":0},{"dt":1655137260,"precipitation":0},{"dt":1655137320,"precipitation":0},{"dt":1655137380,"precipitation":0},{"dt":1655137440,"precipitation":0},{"dt":1655137500,"precipitation":0},{"dt":1655137560,"precipitation":0},{"dt":1655137620,"precipitation":0},{"dt":1655137680,"precipitation":0},{"dt":1655137740,"precipitation":0},{"dt":1655137800,"precipitation":0},{"dt":1655137860,"precipitation":0},{"dt":1655137920,"precipitation":0},{"dt":1655137980,"precipitation":0},{"dt":1655138040,"precipitation":0},{"dt":1655138100,"precipitation":0},{"dt":1655138160,"precipitation":0},{"dt":1655138220,"precipitation":0},{"dt":1655138280,"precipitation":0},{"dt":1655138340,"precipitation":0},{"dt":1655138400,"precipitation":0},{"dt":1655138460,"precipitation":0},{"dt":1655138520,"precipitation":0},{"dt":1655138580,"precipitation":0},{"dt":1655138640,"precipitation":0},{"dt":1655138700,"precipitation":0},{"dt":1655138760,"precipitation":0},{"dt":1655138820,"precipitation":0},{"dt":1655138880,"precipitation":0},{"dt":1655138940,"precipitation":0},{"dt":1655139000,"precipitation":0},{"dt":1655139060,"precipitation":0},{"dt":1655139120,"precipitation":0}],"hourly":[{"dt":1655132400,"temp":78.49,"feels_like":79,"pressure":1010,"humidity":63,"dew_point":64.85,"uvi":4.13,"clouds":80,"visibility":10000,"wind_speed":6.73,"wind_deg":280,"wind_gust":10,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04d"}],"pop":0.36},{"dt":1655136000,"temp":79.07,"feels_like":79.07,"pressure":1010,"humidity":64,"dew_point":65.86,"uvi":5.6,"clouds":75,"visibility":10000,"wind_speed":6.96,"wind_deg":296,"wind_gust":11.52,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04d"}],"pop":0.38},{"dt":1655139600,"temp":79.38,"feels_like":79.38,"pressure":1010,"humidity":60,"dew_point":64.29,"uvi":5.79,"clouds":78,"visibility":10000,"wind_speed":6.38,"wind_deg":302,"wind_gust":11.97,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04d"}],"pop":0.38},{"dt":1655143200,"temp":80.19,"feels_like":81.37,"pressure":1010,"humidity":54,"dew_point":62.04,"uvi":5.28,"clouds":77,"visibility":10000,"wind_speed":4.7,"wind_deg":305,"wind_gust":11.14,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04d"}],"pop":0.34},{"dt":1655146800,"temp":81.3,"feels_like":81.66,"pressure":1009,"humidity":47,"dew_point":59.16,"uvi":6.02,"clouds":33,"visibility":10000,"wind_speed":4.05,"wind_deg":319,"wind_gust":12.8,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"pop":0},{"dt":1655150400,"temp":81.75,"feels_like":81.46,"pressure":1009,"humidity":42,"dew_point":56.44,"uvi":4.13,"clouds":23,"visibility":10000,"wind_speed":4.41,"wind_deg":315,"wind_gust":12.84,"weather":[{"id":801,"main":"Clouds","description":"few
+        clouds","icon":"02d"}],"pop":0},{"dt":1655154000,"temp":81.82,"feels_like":81.09,"pressure":1009,"humidity":38,"dew_point":52.52,"uvi":2.36,"clouds":8,"visibility":10000,"wind_speed":5.53,"wind_deg":306,"wind_gust":13.38,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1655157600,"temp":80.26,"feels_like":80.19,"pressure":1009,"humidity":41,"dew_point":53.65,"uvi":1.06,"clouds":7,"visibility":10000,"wind_speed":3.22,"wind_deg":333,"wind_gust":12.3,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1655161200,"temp":75.63,"feels_like":75.49,"pressure":1010,"humidity":55,"dew_point":58.03,"uvi":0.34,"clouds":6,"visibility":10000,"wind_speed":0.27,"wind_deg":241,"wind_gust":7.49,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1655164800,"temp":70.54,"feels_like":70.25,"pressure":1010,"humidity":63,"dew_point":56.64,"uvi":0,"clouds":5,"visibility":10000,"wind_speed":1.39,"wind_deg":245,"wind_gust":6.69,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1655168400,"temp":67.82,"feels_like":67.17,"pressure":1010,"humidity":61,"dew_point":53.2,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":2.82,"wind_deg":258,"wind_gust":5.7,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1655172000,"temp":66.36,"feels_like":65.37,"pressure":1011,"humidity":57,"dew_point":50.32,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":5.1,"wind_deg":286,"wind_gust":14.29,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1655175600,"temp":65.32,"feels_like":64.33,"pressure":1011,"humidity":59,"dew_point":50.5,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":5.57,"wind_deg":307,"wind_gust":14.67,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1655179200,"temp":64.36,"feels_like":63.46,"pressure":1011,"humidity":63,"dew_point":51.19,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":6.15,"wind_deg":310,"wind_gust":19.08,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1655182800,"temp":63.77,"feels_like":62.85,"pressure":1011,"humidity":64,"dew_point":50.94,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":6.62,"wind_deg":332,"wind_gust":22.75,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1655186400,"temp":62.85,"feels_like":61.84,"pressure":1011,"humidity":64,"dew_point":50.22,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":6.35,"wind_deg":333,"wind_gust":17.9,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1655190000,"temp":61.45,"feels_like":60.39,"pressure":1011,"humidity":66,"dew_point":49.84,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":5.66,"wind_deg":324,"wind_gust":16.98,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1655193600,"temp":60.44,"feels_like":59.38,"pressure":1011,"humidity":68,"dew_point":49.53,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":5.73,"wind_deg":310,"wind_gust":17.52,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1655197200,"temp":59.09,"feels_like":57.99,"pressure":1012,"humidity":70,"dew_point":49.28,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":5.39,"wind_deg":304,"wind_gust":17.36,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1655200800,"temp":59.25,"feels_like":58.21,"pressure":1012,"humidity":71,"dew_point":49.59,"uvi":0.15,"clouds":1,"visibility":10000,"wind_speed":5.26,"wind_deg":327,"wind_gust":20.74,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1655204400,"temp":63.36,"feels_like":62.35,"pressure":1012,"humidity":63,"dew_point":50.32,"uvi":0.62,"clouds":10,"visibility":10000,"wind_speed":6.33,"wind_deg":328,"wind_gust":19.82,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1655208000,"temp":67.46,"feels_like":66.54,"pressure":1012,"humidity":56,"dew_point":51.04,"uvi":1.61,"clouds":8,"visibility":10000,"wind_speed":7.47,"wind_deg":330,"wind_gust":15.08,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1655211600,"temp":70.23,"feels_like":69.31,"pressure":1012,"humidity":50,"dew_point":50.59,"uvi":3.48,"clouds":0,"visibility":10000,"wind_speed":7.58,"wind_deg":333,"wind_gust":11.68,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1655215200,"temp":72.7,"feels_like":71.74,"pressure":1012,"humidity":44,"dew_point":49.39,"uvi":5.58,"clouds":0,"visibility":10000,"wind_speed":7.11,"wind_deg":343,"wind_gust":10.83,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1655218800,"temp":74.86,"feels_like":73.92,"pressure":1012,"humidity":40,"dew_point":48.47,"uvi":7.56,"clouds":0,"visibility":10000,"wind_speed":6.53,"wind_deg":354,"wind_gust":10.8,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1655222400,"temp":76.75,"feels_like":75.9,"pressure":1011,"humidity":38,"dew_point":48.7,"uvi":8.94,"clouds":0,"visibility":10000,"wind_speed":4.99,"wind_deg":11,"wind_gust":9.78,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1655226000,"temp":77.63,"feels_like":76.84,"pressure":1011,"humidity":37,"dew_point":49.03,"uvi":9.24,"clouds":0,"visibility":10000,"wind_speed":4.9,"wind_deg":26,"wind_gust":10.87,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1655229600,"temp":78.01,"feels_like":77.25,"pressure":1011,"humidity":37,"dew_point":49.08,"uvi":8.43,"clouds":0,"visibility":10000,"wind_speed":5.01,"wind_deg":40,"wind_gust":12.26,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1655233200,"temp":78.53,"feels_like":77.83,"pressure":1011,"humidity":37,"dew_point":49.48,"uvi":6.72,"clouds":9,"visibility":10000,"wind_speed":3.89,"wind_deg":53,"wind_gust":11.65,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1655236800,"temp":79.25,"feels_like":79.25,"pressure":1010,"humidity":36,"dew_point":49.59,"uvi":4.61,"clouds":13,"visibility":10000,"wind_speed":3.56,"wind_deg":40,"wind_gust":11.92,"weather":[{"id":801,"main":"Clouds","description":"few
+        clouds","icon":"02d"}],"pop":0},{"dt":1655240400,"temp":79.45,"feels_like":79.45,"pressure":1010,"humidity":36,"dew_point":49.64,"uvi":2.62,"clouds":14,"visibility":10000,"wind_speed":3.06,"wind_deg":36,"wind_gust":12.33,"weather":[{"id":801,"main":"Clouds","description":"few
+        clouds","icon":"02d"}],"pop":0},{"dt":1655244000,"temp":79.32,"feels_like":79.32,"pressure":1010,"humidity":37,"dew_point":50.59,"uvi":1.17,"clouds":14,"visibility":10000,"wind_speed":2.64,"wind_deg":6,"wind_gust":12.1,"weather":[{"id":801,"main":"Clouds","description":"few
+        clouds","icon":"02d"}],"pop":0},{"dt":1655247600,"temp":75.65,"feels_like":75.13,"pressure":1011,"humidity":47,"dew_point":53.69,"uvi":0.38,"clouds":22,"visibility":10000,"wind_speed":2.64,"wind_deg":47,"wind_gust":8.55,"weather":[{"id":801,"main":"Clouds","description":"few
+        clouds","icon":"02d"}],"pop":0},{"dt":1655251200,"temp":71.28,"feels_like":70.68,"pressure":1012,"humidity":55,"dew_point":54.1,"uvi":0,"clouds":32,"visibility":10000,"wind_speed":2.86,"wind_deg":82,"wind_gust":7.18,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"pop":0},{"dt":1655254800,"temp":67.84,"feels_like":67.24,"pressure":1013,"humidity":62,"dew_point":54.12,"uvi":0,"clouds":58,"visibility":10000,"wind_speed":1.97,"wind_deg":80,"wind_gust":4.52,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}],"pop":0},{"dt":1655258400,"temp":66.36,"feels_like":65.75,"pressure":1014,"humidity":65,"dew_point":54.18,"uvi":0,"clouds":59,"visibility":10000,"wind_speed":3.27,"wind_deg":31,"wind_gust":6.4,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}],"pop":0},{"dt":1655262000,"temp":65.52,"feels_like":64.87,"pressure":1014,"humidity":66,"dew_point":53.58,"uvi":0,"clouds":58,"visibility":10000,"wind_speed":3.96,"wind_deg":40,"wind_gust":7.58,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}],"pop":0},{"dt":1655265600,"temp":65.59,"feels_like":64.9,"pressure":1014,"humidity":65,"dew_point":53.19,"uvi":0,"clouds":65,"visibility":10000,"wind_speed":3.44,"wind_deg":38,"wind_gust":6.17,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}],"pop":0},{"dt":1655269200,"temp":63.43,"feels_like":62.71,"pressure":1015,"humidity":69,"dew_point":52.68,"uvi":0,"clouds":59,"visibility":10000,"wind_speed":4.38,"wind_deg":29,"wind_gust":6.24,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}],"pop":0},{"dt":1655272800,"temp":61.7,"feels_like":61,"pressure":1015,"humidity":73,"dew_point":52.59,"uvi":0,"clouds":50,"visibility":10000,"wind_speed":3.78,"wind_deg":32,"wind_gust":4.41,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03n"}],"pop":0},{"dt":1655276400,"temp":60.93,"feels_like":60.24,"pressure":1016,"humidity":75,"dew_point":52.65,"uvi":0,"clouds":32,"visibility":10000,"wind_speed":4.56,"wind_deg":31,"wind_gust":6.91,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03n"}],"pop":0},{"dt":1655280000,"temp":59.95,"feels_like":59.41,"pressure":1016,"humidity":80,"dew_point":53.29,"uvi":0,"clouds":16,"visibility":10000,"wind_speed":4.61,"wind_deg":32,"wind_gust":8.77,"weather":[{"id":801,"main":"Clouds","description":"few
+        clouds","icon":"02n"}],"pop":0},{"dt":1655283600,"temp":59.04,"feels_like":58.59,"pressure":1017,"humidity":84,"dew_point":53.96,"uvi":0,"clouds":12,"visibility":10000,"wind_speed":4.5,"wind_deg":35,"wind_gust":8.95,"weather":[{"id":801,"main":"Clouds","description":"few
+        clouds","icon":"02n"}],"pop":0},{"dt":1655287200,"temp":60.03,"feels_like":59.68,"pressure":1018,"humidity":84,"dew_point":54.82,"uvi":0.17,"clouds":9,"visibility":10000,"wind_speed":4.16,"wind_deg":30,"wind_gust":10.87,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1655290800,"temp":63.59,"feels_like":63.23,"pressure":1019,"humidity":76,"dew_point":55.76,"uvi":0.68,"clouds":7,"visibility":10000,"wind_speed":5.99,"wind_deg":52,"wind_gust":10.85,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1655294400,"temp":66,"feels_like":65.64,"pressure":1020,"humidity":71,"dew_point":56.14,"uvi":1.8,"clouds":6,"visibility":10000,"wind_speed":6.38,"wind_deg":56,"wind_gust":9.1,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1655298000,"temp":67.51,"feels_like":67.15,"pressure":1020,"humidity":68,"dew_point":56.28,"uvi":3.51,"clouds":0,"visibility":10000,"wind_speed":7.49,"wind_deg":64,"wind_gust":8.99,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1655301600,"temp":68.63,"feels_like":68.29,"pressure":1020,"humidity":66,"dew_point":56.23,"uvi":5.62,"clouds":21,"visibility":10000,"wind_speed":8.08,"wind_deg":67,"wind_gust":9.04,"weather":[{"id":801,"main":"Clouds","description":"few
+        clouds","icon":"02d"}],"pop":0}],"daily":[{"dt":1655136000,"sunrise":1655111216,"sunset":1655166109,"moonrise":1655164380,"moonset":1655107380,"moon_phase":0.47,"temp":{"day":79.07,"min":61.92,"max":81.82,"night":65.32,"eve":80.26,"morn":64.2},"feels_like":{"day":79.07,"night":64.33,"eve":80.19,"morn":64.98},"pressure":1010,"humidity":64,"dew_point":65.86,"wind_speed":6.96,"wind_deg":296,"wind_gust":20.65,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"clouds":75,"pop":1,"rain":4.87,"uvi":6.02},{"dt":1655222400,"sunrise":1655197613,"sunset":1655252536,"moonrise":1655255400,"moonset":1655196660,"moon_phase":0.5,"temp":{"day":76.75,"min":59.09,"max":79.45,"night":65.52,"eve":79.32,"morn":59.25},"feels_like":{"day":75.9,"night":64.87,"eve":79.32,"morn":58.21},"pressure":1011,"humidity":38,"dew_point":48.7,"wind_speed":7.58,"wind_deg":333,"wind_gust":22.75,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":0,"pop":0,"uvi":9.24},{"dt":1655308800,"sunrise":1655284012,"sunset":1655338961,"moonrise":1655345700,"moonset":1655286660,"moon_phase":0.55,"temp":{"day":69.1,"min":57.24,"max":71.13,"night":57.24,"eve":67.8,"morn":60.03},"feels_like":{"day":68.58,"night":56.37,"eve":66.81,"morn":59.68},"pressure":1021,"humidity":61,"dew_point":54.63,"wind_speed":9.75,"wind_deg":67,"wind_gust":11.88,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"clouds":36,"pop":0,"uvi":7.62},{"dt":1655395200,"sunrise":1655370413,"sunset":1655425384,"moonrise":1655435280,"moonset":1655377380,"moon_phase":0.59,"temp":{"day":75.69,"min":53.33,"max":77.85,"night":65.35,"eve":74.53,"morn":53.33},"feels_like":{"day":74.61,"night":65.3,"eve":73.8,"morn":52.68},"pressure":1022,"humidity":35,"dew_point":45.54,"wind_speed":14.43,"wind_deg":195,"wind_gust":31.34,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"clouds":42,"pop":0,"uvi":7.93},{"dt":1655481600,"sunrise":1655456816,"sunset":1655511805,"moonrise":1655524140,"moonset":1655468460,"moon_phase":0.62,"temp":{"day":71.67,"min":64.62,"max":84.88,"night":68.34,"eve":75.96,"morn":64.62},"feels_like":{"day":72.54,"night":67.78,"eve":75.88,"morn":65.25},"pressure":1005,"humidity":85,"dew_point":66.43,"wind_speed":13.53,"wind_deg":205,"wind_gust":32.68,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"clouds":100,"pop":0.99,"rain":2.03,"uvi":0.82},{"dt":1655568000,"sunrise":1655543221,"sunset":1655598224,"moonrise":0,"moonset":1655559600,"moon_phase":0.66,"temp":{"day":66.36,"min":53.01,"max":68.83,"night":53.01,"eve":65.84,"morn":62.38},"feels_like":{"day":64.53,"night":50.77,"eve":63.82,"morn":61.75},"pressure":1003,"humidity":39,"dew_point":40.77,"wind_speed":17.09,"wind_deg":349,"wind_gust":30.2,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"clouds":94,"pop":0.05,"uvi":1},{"dt":1655654400,"sunrise":1655629628,"sunset":1655684641,"moonrise":1655612400,"moonset":1655650560,"moon_phase":0.7,"temp":{"day":56.3,"min":48.54,"max":57.81,"night":52.52,"eve":54.01,"morn":51.96},"feels_like":{"day":54.45,"night":50.99,"eve":52.68,"morn":49.96},"pressure":1009,"humidity":60,"dew_point":42.51,"wind_speed":12.01,"wind_deg":305,"wind_gust":18.99,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"clouds":100,"pop":0.31,"rain":0.42,"uvi":1},{"dt":1655740800,"sunrise":1655716038,"sunset":1655771057,"moonrise":1655700360,"moonset":1655741220,"moon_phase":0.75,"temp":{"day":70.48,"min":46.87,"max":76.21,"night":59,"eve":74.66,"morn":46.87},"feels_like":{"day":68.88,"night":57.38,"eve":73.24,"morn":45.1},"pressure":1013,"humidity":35,"dew_point":41.41,"wind_speed":8.34,"wind_deg":342,"wind_gust":14.63,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"clouds":39,"pop":0,"uvi":1}]}'
+  recorded_at: Mon, 13 Jun 2022 15:51:59 GMT
+recorded_with: VCR 6.1.0
