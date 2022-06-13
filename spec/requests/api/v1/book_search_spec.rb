@@ -61,7 +61,7 @@ RSpec.describe 'Get Book-Search Endpoint' do
 
       headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
       city = ''
-      get '/api/v1/book-search', headers: headers, params: { location: city, quantity: -5 }
+      get '/api/v1/book-search', headers: headers, params: { location: city, quantity: 5 }
 
       result = JSON.parse(response.body, symbolize_names: true)
       
@@ -71,7 +71,7 @@ RSpec.describe 'Get Book-Search Endpoint' do
       expect(result[:data][:error]).to have_key(:message)
       expect(result[:data][:error][:message]).to eq("Location parameter cannot be blank")
 
-
+    end 
 
   end
 end

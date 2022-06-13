@@ -5,6 +5,9 @@ class Api::V1::BookSearchController < ApplicationController
     if params[:quantity].to_i <= 0
       render json: ErrorSerializer.bad_quantity
 
+    elsif params[:location].blank? == true
+      render json: ErrorSerializer.empty_location
+
     else
       city = params[:location]
       quantity = params[:quantity]
