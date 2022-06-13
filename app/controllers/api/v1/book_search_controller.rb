@@ -14,8 +14,9 @@ class Api::V1::BookSearchController < ApplicationController
       if books.first.empty? == true || books.last == 0
         render json: ErrorSerializer.no_books_found
       else
-        location = LocationFacade.coordinates_for_city(city)
-        forecast = ForecastFacade.get_forecast(location.latitude, location.longitude)
+        # location = LocationFacade.coordinates_for_city(city)
+        # forecast = ForecastFacade.get_forecast(location.latitude, location.longitude)
+        forecast = BookForecastFacade.get_book_destination_forecast(city)
         render json: BookSerializer.book_search_response(books, forecast, city)
       end 
     end 
