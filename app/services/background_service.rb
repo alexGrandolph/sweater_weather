@@ -12,9 +12,7 @@ class BackgroundService
       c.params['client_id'] = ENV['UNSPLASH_KEY']
     end 
     result = JSON.parse(response.body, symbolize_names: true)
-
     result[:results][0]
-    
   end 
 
 

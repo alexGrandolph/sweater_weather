@@ -7,13 +7,13 @@ RSpec.describe 'Get Forecast Endpoint' do
       city = 'boston,ma'
 
       get '/api/v1/forecast', headers: headers, params: { location: city }
-      
+ 
       expect(response).to be_successful
       expect(response.status).to eq(200)
 
       raw_forecast = JSON.parse(response.body, symbolize_names: true)
       expect(raw_forecast).to have_key(:data)
-      
+     
       forecast = raw_forecast[:data]
       
       expect(forecast).to be_a Hash
@@ -37,7 +37,7 @@ RSpec.describe 'Get Forecast Endpoint' do
       expect(attributes[:current_weather][:humidity]).to be_an Integer
 
       expect(attributes[:current_weather]).to have_key(:uvi)
-      expect(attributes[:current_weather][:uvi]).to be_an Float
+      expect(attributes[:current_weather][:uvi]).to be_a(Float).or be_an(Integer)
 
       expect(attributes[:current_weather]).to have_key(:visibility)
       expect(attributes[:current_weather][:visibility]).to be_an Integer
