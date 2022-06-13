@@ -8,8 +8,8 @@ class Api::V1::BookSearchController < ApplicationController
     
     location = LocationFacade.coordinates_for_city(city)
     forecast = ForecastFacade.get_forecast(location.latitude, location.longitude)
+    binding.pry
     render json: BookSerializer.book_search_response(books, forecast, city)
-    # binding.pry
   end 
 
 
