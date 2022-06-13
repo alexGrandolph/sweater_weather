@@ -6,7 +6,7 @@ RSpec.describe 'Road Trip Endpoint' do
       user = User.create!({
         email: 'mydogskeeter@skeeter.dog',
         password: "dogdogdog",
-        api_key: SecureRandom.hex(15)
+        api_key: '75fb908a28ee7690ff8c2d8c2c5fdb'
       })
       
       headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
