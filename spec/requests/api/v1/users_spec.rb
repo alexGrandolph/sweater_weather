@@ -99,7 +99,7 @@ RSpec.describe 'Users Endpoint' do
       result = JSON.parse(response.body, symbolize_names: true)
 
       expect(response).to be_successful
-      expect(response.status).to eq(201)
+      expect(response.status).to eq(200)
 
       expect(result).to have_key(:data)
       data = result[:data]
@@ -108,6 +108,7 @@ RSpec.describe 'Users Endpoint' do
       expect(data[:type]).to eq("users")
       expect(data).to have_key(:id)
       expect(data[:id]).to be_a String 
+      expect(data[:id]).to eq(user.id.to_s)
       expect(data).to have_key(:attributes)
       expect(data[:attributes]).to be_a Hash
 

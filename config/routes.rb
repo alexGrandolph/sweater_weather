@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       get '/backgrounds', to: 'backgrounds#index'
 
       post '/users', to: 'users#create'
+      post '/sessions', to: 'sessions#login'
 
       get '/book-search', to: 'book_search#index'
     end 
