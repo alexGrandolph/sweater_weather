@@ -22,7 +22,7 @@ RSpec.describe 'Road Trip Endpoint' do
 
       expect(result).to have_key(:data)
       expect(result[:data]).to have_key(:id)
-      expect(result[:data][:type]).toeq('roadtrip')
+      expect(result[:data][:type]).to eq('roadtrip')
       expect(result[:data]).to have_key(:type)
       expect(result[:data]).to have_key(:attributes)
 

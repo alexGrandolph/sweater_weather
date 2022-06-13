@@ -9,6 +9,7 @@ RSpec.describe Route do
 
     expect(route).to be_a Route
     expect(route.time).to eq("06:23:02")
+    expect(route.seconds).to eq(24842)
     expect(route.distance).to eq(446.136)
   end 
 end

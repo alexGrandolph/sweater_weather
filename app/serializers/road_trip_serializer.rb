@@ -1,18 +1,19 @@
 class RoadTripSerializer
 
 
-  def self.road_trip(origin, destination, route, forecast)
+  def self.road_trip(origin, destination, route_and_forecast)
+    # binding.pry
     { "data": {
       "id": 'null',
       "type": 'roadtrip',
       "attributes": {
         "start_city": origin,
         "end_city": destination,
-        "travel_time": route.time,
-        "travel_distance": route.distance,
+        "travel_time": route_and_forecast[0].time,
+        "travel_distance":  route_and_forecast[0].distance,
         "weather_at_eta": {
-          "temperature": forecast.temperature,
-          "conditions": forecast.conditions
+          "temperature":  route_and_forecast[1][0].temp,
+          "conditions":  route_and_forecast[1][0].conditions
         }
       }
     }
