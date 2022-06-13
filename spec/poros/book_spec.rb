@@ -8,7 +8,7 @@ RSpec.describe Book do
     book = Book.new(data)
 
     expect(book).to be_a Book
-    expect(book.isbm).to be_an Array
+    expect(book.isbn).to be_an Array
     expect(book.isbn.first).to eq("0517215039")
     expect(book.title).to eq("Denver")
 
