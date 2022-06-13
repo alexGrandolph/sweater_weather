@@ -2,7 +2,6 @@ class Api::V1::UsersController < ApplicationController
 
 
   def create
-    # binding.pry
     if params[:password] == params[:password_confirmation]
       user = User.create!(email: params[:email], password: params[:password])
       if user.save
