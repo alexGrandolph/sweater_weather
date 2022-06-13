@@ -1,7 +1,6 @@
 class ForecastSerializer
 
   def self.forecast(forecast)
-    # binding.pry
     { "data":
       {
         "id": 'null',
