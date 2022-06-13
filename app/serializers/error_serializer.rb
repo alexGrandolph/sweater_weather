@@ -40,6 +40,16 @@ class ErrorSerializer
       }      
     }
   end
+
+  def self.bad_credentials
+    { "errors":
+      {
+        "credentials": 
+         ['Bad credentials']
+        
+      }      
+    }
+  end
   
 
 

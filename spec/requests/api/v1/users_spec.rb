@@ -143,9 +143,9 @@ RSpec.describe 'Users Endpoint' do
       expect(response.status).to eq(422)
       result = JSON.parse(response.body, symbolize_names: true)
       expect(result).to have_key(:errors)
-      expect(result[:errors]).to have_key(:email)
+      expect(result[:errors]).to have_key(:credentials)
 
-      expect(result[:errors][:email]).to eq(["has already been taken"])
+      expect(result[:errors][:credentials]).to eq(["Bad credentials"])
     end 
   end
 end
