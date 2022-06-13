@@ -79,7 +79,7 @@ class ForecastSerializer
           end, 
           "hourly_weather":  forecast.hourly.shift(8).map do |hour|
              {
-              "time": hour.time.strftime('%H:%M'),
+              "time": hour.time,
               "temp": hour.temp,
               "conditions": hour.conditions,
               "icon": hour.icon 
