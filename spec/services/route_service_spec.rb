@@ -6,9 +6,10 @@ RSpec.describe RouteService do
     origin = 'denver,co'
     destination = "albuquerque, nm"
     route = RouteService.get_route(origin, destination)
+
     expect(route).to have_key(:route)
     expect(route[:route]).to have_key(:distance)
-    expect(route[:route]).to have_key(:formatted_time)
+    expect(route[:route]).to have_key(:formattedTime)
   end
 
 
