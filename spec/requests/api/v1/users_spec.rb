@@ -36,6 +36,7 @@ RSpec.describe 'Users Endpoint' do
   end
   
   describe 'Sad Path' do
+    
     it 'returns a password not matching error if passwords do not match', :vcr do
       headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
       payload = {
@@ -54,10 +55,31 @@ RSpec.describe 'Users Endpoint' do
 
       expect(result[:data][:error]).to have_key(:message)
       expect(result[:data][:error][:message]).to eq("Passwords do not match")
+    end 
 
+    it 'returns a user already exists error if email is already in database', :vcr do
+      user = User.create!({
+        email: 'mydogskeeter@skeeter.dog',
+        password: "dogdogdog",
+        password_confirmation: "dogdogdog"
+      })
+      headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
+      payload = {
+        "email": 'mydogskeeter@skeeter.dog',
+        "password": "skeeter",
+        "password_confirmation": "skeeter"
+      }
 
+      post '/api/v1/users', headers: headers, params: JSON.generate(payload)
+      expect(response.status).to eq(401)
 
+      result = JSON.parse(response.body, symbolize_names: true)
+      
+      expect(result).to have_key(:data)
+      expect(result[:data]).to have_key(:error)
 
+      expect(result[:data][:error]).to have_key(:message)
+      expect(result[:data][:error][:message]).to eq("Email already exists")
     end 
 
 
