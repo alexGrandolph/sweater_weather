@@ -7,13 +7,13 @@ RSpec.describe 'Get Forecast Endpoint' do
       city = 'boston,ma'
 
       get '/api/v1/forecast', headers: headers, params: { location: city }
-      # binding.pry
+ 
       expect(response).to be_successful
       expect(response.status).to eq(200)
 
       raw_forecast = JSON.parse(response.body, symbolize_names: true)
       expect(raw_forecast).to have_key(:data)
-      
+     
       forecast = raw_forecast[:data]
       
       expect(forecast).to be_a Hash
