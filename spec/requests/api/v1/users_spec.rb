@@ -81,6 +81,7 @@ RSpec.describe 'Users Endpoint' do
   end
 
   describe 'User Login Happy Path' do
+
     it 'Sends back a users email, id, and api key' do
       user = User.create!({
           email: 'skeeterthecorgi@skeeter.dog',
@@ -118,9 +119,33 @@ RSpec.describe 'Users Endpoint' do
 
       expect(data[:attributes][:email]).to eq(user.email)
       expect(data[:attributes][:api_key]).to eq(user.api_key)
-
     end 
-
   end 
 
+  describe 'User Login Sad Path' do
+
+    it 'Sends back a 400 status when given bad credentials' do
+      user = User.create!({
+          email: 'skeeterthecorgi@skeeter.dog',
+          password: "dogdogdog",
+          password_confirmation: "dogdogdog"
+        })
+
+      headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
+      payload = {
+        "email": 'skeeterthecorgi@skeeter.dog',
+        "password": "corgi",
+      }
+
+      post '/api/v1/sessions', headers: headers, params: JSON.generate(payload)
+
+      # binding.pry
+      expect(response.status).to eq(422)
+      result = JSON.parse(response.body, symbolize_names: true)
+      expect(result).to have_key(:errors)
+      expect(result[:errors]).to have_key(:email)
+
+      expect(result[:errors][:email]).to eq(["has already been taken"])
+    end 
+  end
 end
