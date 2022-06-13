@@ -5,15 +5,19 @@ RSpec.describe BookService do
   it 'returns Book JSON data for a given location and quantity', :vcr do
     location = 'denver,co'
     quantity = 5
-    book = BookService.get_books(location, quantity)
+    books = BookService.get_books(location, quantity)
 
-    expect(book).to be_a Hash
-    expect(book).to have_key(:numFound)
-    expect(book).to have_key(:docs)
-    expect(book[:docs]).to be_an Array
-    expect(book[:docs][0]).to have_key(:title)
-    expect(book[:docs][2]).to have_key(:publisher)
+    expect(books).to be_a Hash
+    expect(books).to have_key(:numFound)
+    expect(books).to have_key(:docs)
+    expect(books[:docs]).to be_an Array
+    books[:docs].each do |book|
+      expect(book).to have_key(:title)
+      expect(book).to have_key(:publisher)
+      expect(book[:publisher]).to be_an Array
+    end 
 
+    expect(books[:numFound]).to eq(books[:docs].count)
 
   end 
 
