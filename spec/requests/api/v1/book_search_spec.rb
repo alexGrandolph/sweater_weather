@@ -15,12 +15,13 @@ RSpec.describe 'Get Book-Search Endpoint' do
     expect(full_result[:data]).to have_key(:id)
     expect(full_result[:data]).to have_key(:type)
     expect(full_result[:data]).to have_key(:attributes)
-    
-    data = full_result[:data]
+   
+    data = full_result[:data][:attributes]
 
-    expect(data).to have_key(:location)
+    expect(data).to have_key(:destination)
     
     expect(data).to have_key(:forecast)
+    expect(data[:forecast]).to be_a Hash
     expect(data[:forecast]).to have_key(:summary)
     expect(data[:forecast]).to have_key(:temperature)
     
@@ -29,16 +30,13 @@ RSpec.describe 'Get Book-Search Endpoint' do
 
     expect(data).to have_key(:books)
     expect(data[:books]).to be_an Array
+    expect(data[:books].count).to eq(5)
 
     data[:books].each do |book|
-
       expect(book).to be_a Hash
       expect(book).to have_key(:isbn)
-      expect(book[:isbn]).to be_an Array
-
       expect(book).to have_key(:title)
       expect(book).to have_key(:publisher)
-      expect(book[:publisher]).to be_an Array
     
     end
 
