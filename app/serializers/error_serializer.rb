@@ -1,6 +1,5 @@
 class ErrorSerializer
 
-
   def self.bad_quantity
     { "data":
       {
