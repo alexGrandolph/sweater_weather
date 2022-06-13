@@ -46,6 +46,52 @@ class ForecastSerializer
 
   end
 
+  def self.forecast_poro(forecast)
+    # binding.pry
+    { "data":
+      {
+        "id": 'null',
+        "type": "forecast",
+        "attributes": 
+        {
+          "current_weather": {
+            "datetime": forecast.datetime,
+            "sunrise": forecast.sunrise,
+            "sunset": forecast.sunset,
+            "temperature": forecast.temp,
+            "feelsLike": forecast.feels_like,
+            "humidity": forecast.humidity,
+            "uvi": forecast.uvi,
+            "visibility": forecast.visibility,
+            "conditions": forecast.conditions,
+            "icon": forecast.icon
+            },
+          "daily_weather":  forecast.daily.shift(5).map do |day| 
+            {
+              "datetime": day.datetime,
+              "sunrise": day.sunrise,
+              "sunset": day.sunset,
+              "max_temp": day.max_temp,
+              "min_temp": day.min_temp,
+              "conditions": day.conditions,
+              "icon": day.icon 
+            }
+          end, 
+          "hourly_weather":  forecast.hourly.shift(8).map do |hour|
+             {
+              "time": hour.time.strftime('%H:%M'),
+              "temp": hour.temp,
+              "conditions": hour.conditions,
+              "icon": hour.icon 
+           }
+          end,
+        }
+      }
+    }
+
+
+  end
+
 # 1654899562, current
 # 1654876800 first of 5 day forecast
 

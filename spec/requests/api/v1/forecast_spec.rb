@@ -7,7 +7,7 @@ RSpec.describe 'Get Forecast Endpoint' do
       city = 'boston,ma'
 
       get '/api/v1/forecast', headers: headers, params: { location: city }
-      
+      # binding.pry
       expect(response).to be_successful
       expect(response.status).to eq(200)
 

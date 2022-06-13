@@ -1,5 +1,5 @@
 class Forecast
-  attr_reader :datetime, :sunrise, :sunset, :temp, :feels_like, :humidity, :uvi, :visibility, :conditions, :icon, :daily
+  attr_reader :datetime, :sunrise, :sunset, :temp, :feels_like, :humidity, :uvi, :visibility, :conditions, :icon, :daily, :hourly
 
 
   def initialize(attributes)
@@ -15,6 +15,7 @@ class Forecast
     @conditions = attributes[:current][:weather][0][:main]
     @icon = attributes[:current][:weather][0][:icon]
     @daily = attributes[:daily].map { |day| DailyForecast.new(day) }
+    @hourly = attributes[:hourly].map { |hour| HourlyForecast.new(hour) }
   end 
 
 

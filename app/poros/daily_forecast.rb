@@ -1,5 +1,5 @@
 class DailyForecast
-
+  attr_reader :datetime, :sunrise, :sunset, :max_temp, :min_temp, :conditions, :icon
 
   def initialize(attributes)
     # binding.pry
