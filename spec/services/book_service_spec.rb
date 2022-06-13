@@ -11,6 +11,7 @@ RSpec.describe BookService do
     expect(books).to have_key(:numFound)
     expect(books).to have_key(:docs)
     expect(books[:docs]).to be_an Array
+    
     books[:docs].each do |book|
       expect(book).to have_key(:title)
       expect(book).to have_key(:publisher)
@@ -18,11 +19,6 @@ RSpec.describe BookService do
     end 
 
     expect(books[:numFound]).to eq(books[:docs].count)
-
   end 
-
-
-
-
 
 end 

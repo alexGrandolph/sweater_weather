@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Get Book-Search Endpoint' do
   describe 'Happy Path' do
+    
     it 'returns a JSON respones contaning books backing search parameters', :vcr do
       headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
       city = 'boston,ma'

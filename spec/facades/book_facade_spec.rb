@@ -10,6 +10,4 @@ RSpec.describe BookFacade do
     expect(books[0].count).to eq(books[1])
   end
 
-
-
 end 
