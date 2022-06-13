@@ -3,7 +3,6 @@ class Forecast
 
 
   def initialize(attributes)
-
     @datetime = Time.at(attributes[:current][:dt]).to_s
     @sunrise = Time.at(attributes[:current][:sunrise]).to_s
     @sunset = Time.at(attributes[:current][:sunset]).to_s

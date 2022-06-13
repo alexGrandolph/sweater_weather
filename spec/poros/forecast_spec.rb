@@ -21,32 +21,4 @@ RSpec.describe Forecast do
     expect(current.icon).to eq("04n")
     
   end 
-  
-  
-  
-  
 end
-# data = {
-#           "dt": 1654893027,
-#           "sunrise": 1654852037,
-#           "sunset": 1654906818,
-#           "temp": 75.43,
-#           "feels_like": 74.61,
-#           # "pressure": 1008,
-#           "humidity": 42,
-#           # "dew_point": 284.35,
-#           "uvi": 2.18,
-#           # "clouds": 40,
-#           "visibility": 10000,
-#           "wind_speed": 5.66,
-#           "wind_deg": 270,
-#           "wind_gust": 10.29,
-#           "weather": [
-#                       {
-#                           "id": 802,
-#                           "main": "Clouds",
-#                           "description": "scattered clouds",
-#                           "icon": "03d"
-#                       }
-#                       ]
-#         }
