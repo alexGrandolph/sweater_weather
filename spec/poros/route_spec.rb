@@ -8,6 +8,7 @@ RSpec.describe Route do
     route = Route.new(data)
 
     expect(route).to be_a Route
-    expect(route.time).to be_an Array
-
+    expect(route.time).to eq("06:23:02")
+    expect(route.distance).to eq(446.136)
+  end 
 end
