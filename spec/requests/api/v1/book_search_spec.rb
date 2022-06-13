@@ -55,7 +55,7 @@ RSpec.describe 'Get Book-Search Endpoint' do
       expect(result[:data]).to have_key(:error)
 
       expect(result[:data][:error]).to have_key(:message)
-      expect(result[:data][:error][:message]).to eq("Quantity must be a positive integer")
+      expect(result[:data][:error][:message]).to eq("Quantity must be a positive integer greater than zero")
 
 
     end 
