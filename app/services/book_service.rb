@@ -11,6 +11,5 @@ class BookService
       c.params['limit'] = quantity
     end
     result = JSON.parse(response.body, symbolize_names: true)
-    # binding.pry
   end
 end

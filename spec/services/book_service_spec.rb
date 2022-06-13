@@ -8,7 +8,7 @@ RSpec.describe BookService do
     book = BookService.get_books(location, quantity)
 
     expect(book).to be_a Hash
-    expect(book).to have_key(:numFoundExact)
+    expect(book).to have_key(:numFound)
     expect(book).to have_key(:docs)
     expect(book[:docs]).to be_an Array
     expect(book[:docs][0]).to have_key(:title)
