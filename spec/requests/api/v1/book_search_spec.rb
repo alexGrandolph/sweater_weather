@@ -41,7 +41,9 @@ RSpec.describe 'Get Book-Search Endpoint' do
       end
     end
   end 
+
   describe 'Sad Path' do
+    
     it 'giving quantity less than or equal to zero results in quantity error response', :vcr do
 
       headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }

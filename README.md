@@ -1,5 +1,25 @@
 # README
 
+***CREDITS:***
+- openlibrary.orb API for book results / book-search endpoint
+- openweathermap.org one-call API for fetching forecast data for forecast endpoint
+- developer.mapquest.com Geocoding API for returning latitude and longitute for a given city
+- unsplash.com API for returning background images for a given city
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   "data": {
     "id": null,
