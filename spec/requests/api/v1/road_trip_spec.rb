@@ -8,7 +8,7 @@ RSpec.describe 'Road Trip Endpoint' do
         password: "dogdogdog",
         api_key: SecureRandom.hex(15)
       })
-      y
+      
       headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
       payload = {
         "origin": 'denver, co',
@@ -16,7 +16,7 @@ RSpec.describe 'Road Trip Endpoint' do
         "api_key": "75fb908a28ee7690ff8c2d8c2c5fdb"
       }
 
-      post '/api/v1/users', headers: headers, params: JSON.generate(payload)
+      post '/api/v1/road_trip', headers: headers, params: JSON.generate(payload)
 
       result = JSON.parse(response.body, symbolize_names: true)
 
