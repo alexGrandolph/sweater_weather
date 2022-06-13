@@ -2,8 +2,9 @@ require 'rails_helper'
 
 RSpec.describe Background do
   it 'exists and has readable attributes', :vcr do
-    data = BackgroundService.get_background_for_location('miami,fl')
-    
+    # data = BackgroundService.get_background_for_location('miami,fl')
+    raw = File.read('spec/fixtures/handrolled/background.json')
+    data = JSON.parse(raw, symbolize_names: true)[:results][0]
     background = Background.new(data)
 
     expect(background).to be_a Background
