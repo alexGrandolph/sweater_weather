@@ -57,6 +57,7 @@ RSpec.describe 'Get Book-Search Endpoint' do
       expect(result[:data][:error]).to have_key(:message)
       expect(result[:data][:error][:message]).to eq("Quantity must be a positive integer greater than zero")
     end 
+
     it 'giving empty location results in empty location error response', :vcr do
 
       headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
@@ -70,7 +71,6 @@ RSpec.describe 'Get Book-Search Endpoint' do
 
       expect(result[:data][:error]).to have_key(:message)
       expect(result[:data][:error][:message]).to eq("Location parameter cannot be blank")
-
     end 
 
   end

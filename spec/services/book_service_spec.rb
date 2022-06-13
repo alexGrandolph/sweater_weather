@@ -12,7 +12,7 @@ RSpec.describe BookService do
     expect(book).to have_key(:docs)
     expect(book[:docs]).to be_an Array
     expect(book[:docs][0]).to have_key(:title)
-    expect(book[:docs][4]).to have_key(:publisher)
+    expect(book[:docs][2]).to have_key(:publisher)
 
 
   end 
