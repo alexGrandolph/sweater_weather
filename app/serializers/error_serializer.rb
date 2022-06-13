@@ -22,5 +22,16 @@ class ErrorSerializer
   end 
 
 
+  def self.no_books_found
+    { "data":
+      {
+        "error": {
+          "message": 'No book matches for given location'
+        }
+      }      
+    }
+  end 
+
+
 
 end 
