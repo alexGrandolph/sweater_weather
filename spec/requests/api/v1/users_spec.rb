@@ -36,7 +36,7 @@ RSpec.describe 'Users Endpoint' do
   end
   
   describe 'Sad Path' do
-    it 'returns a password not matching error if passwords do not match' do
+    it 'returns a password not matching error if passwords do not match', :vcr do
       headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
       payload = {
         "email": 'mydogskeeter@skeeter.dog',
@@ -47,6 +47,12 @@ RSpec.describe 'Users Endpoint' do
       post '/api/v1/users', headers: headers, params: JSON.generate(payload)
 
       result = JSON.parse(response.body, symbolize_names: true)
+      
+      expect(result).to have_key(:data)
+      expect(result[:data]).to have_key(:error)
+
+      expect(result[:data][:error]).to have_key(:message)
+      expect(result[:data][:error][:message]).to eq("Passwords do not match")
 
 
 

@@ -8,12 +8,11 @@ class Api::V1::UsersController < ApplicationController
         user.api_key = SecureRandom.hex(15)
       end
       render json: UserSerializer.new_user(user), status: 201
-    else 
-      # render json: status: 404
+    elsif params[:password] != params[:password_confirmation]
+     render json: ErrorSerializer.password_mismatch
     end 
   end 
 
-  private
   
 
 
