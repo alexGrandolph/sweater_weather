@@ -124,7 +124,7 @@ RSpec.describe 'Users Endpoint' do
 
   describe 'User Login Sad Path' do
 
-    it 'Sends back a 400 status when given bad credentials' do
+    it 'Sends back a 400 status when given bad password' do
       user = User.create!({
           email: 'skeeterthecorgi@skeeter.dog',
           password: "dogdogdog",
@@ -139,7 +139,29 @@ RSpec.describe 'Users Endpoint' do
 
       post '/api/v1/sessions', headers: headers, params: JSON.generate(payload)
 
-      # binding.pry
+      expect(response.status).to eq(422)
+      result = JSON.parse(response.body, symbolize_names: true)
+      expect(result).to have_key(:errors)
+      expect(result[:errors]).to have_key(:credentials)
+
+      expect(result[:errors][:credentials]).to eq(["Bad credentials"])
+    end 
+
+    it 'Sends back a 400 status when given bad email' do
+      user = User.create!({
+          email: 'skeeterthecorgi@skeeter.dog',
+          password: "dogdogdog",
+          password_confirmation: "dogdogdog"
+        })
+
+      headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
+      payload = {
+        "email": 'corgi@skeeter.dog',
+        "password": "dogdogdog",
+      }
+
+      post '/api/v1/sessions', headers: headers, params: JSON.generate(payload)
+
       expect(response.status).to eq(422)
       result = JSON.parse(response.body, symbolize_names: true)
       expect(result).to have_key(:errors)
