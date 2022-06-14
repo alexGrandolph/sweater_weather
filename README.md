@@ -31,7 +31,7 @@ A backend application, exposing any endpoint needed for planning a roadtrip.
   - Use the variable `WEATHER_KEY` for your Open Weather API key
   - Use the variable `MAPQUEST_KEY` for your MapQuest API key
   - Use the variable `Unsplash_KEY` for your MapQuest API key
-  - It should look like this: <img width="462" alt="Screen Shot 2022-06-14 at 2 11 15 PM" src="https://user-images.githubusercontent.com/96802470/173698387-0df90ac5-d0b7-4c59-81f1-40b7ec8b1c85.png">
+  - It should look like this: <br> <img width="462" alt="Screen Shot 2022-06-14 at 2 11 15 PM" src="https://user-images.githubusercontent.com/96802470/173698387-0df90ac5-d0b7-4c59-81f1-40b7ec8b1c85.png">
 </div>
 
 # Getting Started
