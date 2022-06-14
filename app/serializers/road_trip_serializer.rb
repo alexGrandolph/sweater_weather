@@ -2,7 +2,6 @@ class RoadTripSerializer
 
 
   def self.road_trip(origin, destination, road_trip)
-    # binding.pry
     { "data": {
       "id": 'null',
       "type": 'roadtrip',
@@ -18,9 +17,6 @@ class RoadTripSerializer
       }
     }
   }
-
-
-
   end 
 
 end 

@@ -51,7 +51,23 @@ class ErrorSerializer
     }
   end
   
-
+  def self.impossible_route(origin, destination)
+    { "data": {
+      "id": 'null',
+      "type": 'roadtrip',
+      "attributes": {
+        "start_city": origin,
+        "end_city": destination,
+        "travel_time": "impossible route",
+        "travel_distance":  "impossible route",
+        "weather_at_eta": {
+          "temperature":  "",
+          "conditions":  ""
+        }
+      }
+    }
+  }
+  end 
 
 
 end 

@@ -8,7 +8,11 @@ class Api::V1::RoadTripController < ApplicationController
     # binding.pry
     if User.find_by(api_key: api_key)
       road_trip = RoadTripFacade.route(origin, destination)
-      render json: RoadTripSerializer.road_trip(origin, destination, road_trip)
+      if road_trip.is_a?(RoadTrip)
+        render json: RoadTripSerializer.road_trip(origin, destination, road_trip)
+      else
+        render json: ErrorSerializer.impossible_route(origin, destination)
+      end 
     end
   end
 
