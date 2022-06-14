@@ -1,5 +1,5 @@
 <div align="center">
-
+<img src="logomakr.com/app/1ERYnL">
 This is Sweater Weather 
 A backend application, exposing any endpoint needed for planning a roadtrip. 
 
