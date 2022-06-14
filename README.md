@@ -42,59 +42,253 @@ A backend application, exposing any endpoint needed for planning a roadtrip.
 :four: Start your local server with `rails s` from the command line. <br><br> 
 :five: Call endpoints with a front end application or by using *POSTMAN* <br><br>
 </div>
-**Calling the Endpoints**
+  
 
-*Retrieve Weather/Forecast Data for a City*
-
+# Calling the Endpoints
+<div align="center">  
+  <h2><b>Retrieve Weather/Forecast Data for a City</b></h2>
+ </div>
 Example Request:
 
-
+<br>
+```
+GET /api/v1/forecast?location=denver,co
+Content-Type: application/json
+Accept: application/json
+```
+<br>
+  
 Example Response:
+<br>
+```
+{
+    "data": {
+        "id": "null",
+        "type": "forecast",
+        "attributes": {
+            "current_weather": {
+                "datetime": "2022-06-14 16:22:08 -0600",
+                "sunrise": "2022-06-14 04:26:34 -0600",
+                "sunset": "2022-06-14 18:49:16 -0600",
+                "temperature": 90.3,
+                "feelsLike": 102.83,
+                "humidity": 64,
+                "uvi": 2.3,
+                "visibility": 10000,
+                "conditions": "Clear",
+                "icon": "01d"
+            },
+            "daily_weather": [
+                {
+                    "datetime": "06/14/2022",
+                    "sunrise": "04:26:34 AM",
+                    "sunset": "06:49:16 PM",
+                    "max_temp": 97.09,
+                    "min_temp": 79.11,
+                    "conditions": "Rain",
+                    "icon": "10d"
+                },
+                { ... etc }
+               ],
+              "hourly_weather": [
+                {
+                    "time": "16:00:00",
+                    "temp": 90.3,
+                    "conditions": "Clear",
+                    "icon": "01d"
+                },
+  
+```
+
+<h3>About This Endpoint:</h3><br>
+<i>In SweaterWeather, the retrieve forecast data endpoint is exposed by consuming two external APIs, parsing/organizing that data, instantiating the data into appropriate objects, then serializing result.  First, the location parameter given with the request, is used in a request to the MapQuest Geocoding API.  The response for this request contains the latitude and longitude of the city/location given.  Those coordinates are readable attributes of the Location Plain Old Ruby Object, and then they are used in a request to the OpenWeather API.  The response from this request is used to instantiate three POROs; Forecast, HourlyForecast, and DailyForecast.  These POROs allow for easy manipulation of the forecast data, as well as a way to effientely display the desired attributes in the ForecastSerializer/JSON response.</i>
+
+<br>
+<br>
+  
+<div align="center">  
+  <h2><b>Retrieve a Background Image for a City</b></h2>
+</div>
+  
 
 
-About This Endpoint:
-In SweaterWeather, the retrieve forecast data endpoint is exposed by consuming two external APIs, parsing/organizing that data, instantiating the data into appropriate objects, then serializing result.  First, the location parameter given with the request, is used in a request to the MapQuest Geocoding API.  The response for this request contains the latitude and longitude of the city/location given.  Those coordinates are readable attributes of the Location Plain Old Ruby Object, and then they are used in a request to the OpenWeather API.  The response from this request is used to instantiate three POROs; Forecast, HourlyForecast, and DailyForecast.  These POROs allow for easy manipulation of the forecast data, as well as a way to effientely display the desired attributes in the ForecastSerializer/JSON response. 
+Example Request: <br>
+```
 
-*Retrieve a Background Image for a City*
-
-Example Request:
-
-
-Example Response:
-
-
-About This Endpoint:
-The location given in the parameters for this request is used to make a call to the Unsplash API.  The data from that response is used to make a Background PORO/object.  This object is used to effientely call the desired attributes for the JSON response.
+GET /api/v1/backgrounds?location=atlanta,ga
+Content-Type: application/json
+Accept: application/json  
+  
+```
+  
+<br>
+Example Response: <br>
 
 
-*Retrieve Book Details and Forecast Data for a City*
+```
+  {
+    "data": {
+        "type": "image",
+        "id": "null",
+        "attributes": {
+            "image": {
+                "location": "atlanta,ga",
+                "area": "Atlanta, GA",
+                "image_url": "https://images.unsplash.com/photo-1599698000828-2cf0562f2bf4?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMzY4Njd8MHwxfHNlYXJjaHwxfHxhdGxhbnRhJTJDZ2F8ZW58MHx8fHwxNjU1MjQ1OTM5&ixlib=rb-1.2.1&q=80",
+                "description": "woman in white and red floral tank top holding black smartphone during daytime",
+                "credit": {
+                    "source": "https://api.unsplash.com/photos/mM8igGR9NFY",
+                    "author": "Jeffery Erhunse"
+                }
+            }
+        }
+    }
+}
+  
 
-Example Request:
+```
+<br>
+  
+  
+<h3>About This Endpoint:</h3><br>
+<i>The location given in the parameters for this request is used to make a call to the Unsplash API.  The data from that response is used to make a Background PORO/object.  This object is used to effientely call the desired attributes for the JSON response.</i
+
+<br><br>
+<div align="center">  
+  <h2><b>Retrieve Book Details and Forecast Data for a City</b></h2>
+</div>
+  
+Example Request: <br>
+```
+GET /api/v1/backgrounds?location=albuquerque,nm&quantity=2
+Content-Type: application/json
+Accept: application/json
+  
+  
+```  
+
+Example Response: <br>
+
+  
+```
+  {
+    "data": {
+        "id": "null",
+        "type": "books",
+        "attributes": {
+            "destination": "albuquerque,nm",
+            "forecast": {
+                "summary": "Dust",
+                "temperature": 94.26
+            },
+            "total_books_found": 2,
+            "books": [
+                {
+                    "title": "The accelerated groups",
+                    "isbn": null,
+                    "publisher": [
+                        "New Mexico Press"
+                    ]
+                },
+                {
+                    "title": "Hell's Quest",
+                    "isbn": [
+                        "1592991971",
+                        "9781592991976"
+                    ],
+                    "publisher": [
+                        "Inkwater Press"
+                    ]
+                }
+            ]
+        }
+    }
+}
+  
+  
+```
+
+<h3>About This Endpoint:</h3><br>
+<i>The location and quantity parameter in this request is used to make a call to the OpenLibrary API.  The quantity parameter is used to limit the number of books returned from the Open Library API. The data is again used to instantiate a Book PORO for readable code in the BookSerializer. This endpoint makes use of the same code as the retrieve weather data endpoint to return forecast data for the same city as the book search.</i>
 
 
-Example Response:
+<div align="center">  
+  <h2><b>Register a User</b></h2>
+</div>
+  
+  
+Example Request: <br>
+
+```
+ POST /api/v1/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "skeeterthecorgi@corgi.com",
+  "password": "skeeter",
+  "password_confirmation": "skeeter"
+}
+  
+```
+  
+Example Response: <br>
+
+```
+{
+    "data": {
+        "type": "users",
+        "id": "3",
+        "attributes": {
+            "email": "skeeterthecorgi@corgi.com",
+            "api_key": "45796ab40399a7ccdbbaa8dcfd6e0c"
+        }
+    }
+}
+  
+  
+``` 
+  
+<h3>About This Endpoint:</h3><br>
+<i>This endpoint makes use of the one model used in SweaterWeather, the User model.  The `bcrypt` gem is utilized to ensure safe encrytion of the users passwords and it also allows for use of the `:password_confrimation` parameter, ensuring the users password is what they intended it to be.  The user information is passed in the body of the request, adding another layer of security.  If both password parameters match and a new User record is saved, an api_key is generated and assigned to that user via the api_key column in the User table. `SecureRandom.hex(15)` is used to generate the key, making sure it is a unique and safe key. Only the users id, email, and api key are included in the response body.</i>
+<br>
+  
+<div align="center">  
+  <h2><b>User Login</b></h2>
+</div>
 
 
-About This Endpoint:
-The location and quantity parameter in this request is used to make a call to the OpenLibrary API.  The quantity parameter is used to limit the number of books returned from the Open Library API. The data is again used to instantiate a Book PORO for readable code in the BookSerializer. This endpoint makes use of the same code as the retrieve weather data endpoint to return forecast data for the same city as the book search. 
+Example Request: <br>
 
-*Register a User*
+```
+POST /api/v1/sessions
+Content-Type: application/json
+Accept: application/json
 
-Example Request:
+{
+  "email": "skeeterthecorgi@corgi.com",
+  "password": "skeeter"
+}
+  
+  ```
 
-
-Example Response:
-
-
-About This Endpoint:
-This endpoint makes use of the one model used in SweaterWeather, the User model.  The `bcrypt` gem is utilized to ensure safe encrytion of the users passwords and it also allows for use of the `:password_confrimation` parameter, ensuring the users password is what they intended it to be.  The user information is passed in the body of the request, adding another layer of security.  If both password parameters match and a new User record is saved, an api_key is generated and assigned to that user via the api_key column in the User table. `SecureRandom.hex(15)` is used to generate the key, making sure it is a unique and safe key. Only the users id, email, and api key are included in the response body.
-
-*User Login*
-
-Example Request:
-
-
-Example Response:
+Example Response: <br>
+  
+  
+  ```
+  {
+    "data": {
+        "type": "users",
+        "id": "1",
+        "attributes": {
+            "email": "corgi.com",
+            "api_key": "3a31904f442331ef36275ed9de77a4"
+        }
+    }
+}
+  
+  
+  ```
 
 
 About This Endpoint:
