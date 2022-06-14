@@ -24,14 +24,14 @@ A backend application, exposing any endpoint needed for planning a roadtrip.
 - Rails 5.2.6
 - This repo is a functioning back end only application.  To reach the available endpoints, it is suggested to use [<img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white"/>](https://learning.postman.com/docs/getting-started/introduction/) .  
 - This repo is front end ready. [Click Here](#front-end-wire-frames) for mock wire frames for a potential front end application.
-- The [MapQuest APIs](https://developer.mapquest.com/), the *Unsplash API*, and the *Open Weather API* will require API keys for this program to run locally. 
+- The [MapQuest APIs](https://developer.mapquest.com/), [Unsplash API](https://unsplash.com/developers), and the [OpenWeather API]([https://unsplash.com/developers](https://openweathermap.)) will require API keys for this program to run locally. 
   - Visit each API providers webpage to create an account and receive an API key
   - Run `bundle exec figaro install` from your command line to generate the `application.yml` file locally
   - From your command line run `<code/atom/idea> config/application.yml` to open the `application.yml`    file in your text editor. 
   - Use the variable `WEATHER_KEY` for your Open Weather API key
   - Use the variable `MAPQUEST_KEY` for your MapQuest API key
   - Use the variable `Unsplash_KEY` for your MapQuest API key
-  - It should look like this: <image here>
+  - It should look like this: <img width="462" alt="Screen Shot 2022-06-14 at 2 11 15 PM" src="https://user-images.githubusercontent.com/96802470/173698387-0df90ac5-d0b7-4c59-81f1-40b7ec8b1c85.png">
 </div>
 
 # Getting Started
