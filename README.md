@@ -1,22 +1,22 @@
-# README
+<div align="center">
+
 This is Sweater Weather 
 A backend application, exposing any endpoint needed for planning a roadtrip. 
 
+  ## Table of Contents
 
-Table of Contents:
-
-- off the bat
-- getting started
-- calling the endpoins
-- testing
-- credits
-- Technologies Used
-- About
-- Front End Wireframes
-
+  ### [Off the Bat](#off-the-bat)
+  ### [Getting Started](#getting-started)
+  ### [Calling The Endpoints](#calling-the-endpoints)
+  ### [Testing](#testing)
+  ### [Credits](#credits)
+  ### [Technologies Used](#technologies-used)
+  ### [About This Project](#about-this-project)
+  ### [Credits](#front-end-wire-frames)
 
 
-**Off the Bat**
+
+# Off the Bat
 - Ruby 2.7.4
 - Rails 5.2.6
 - This repo is a functioning back end only application.  To reach the available endpoints, it is suggested to use POSTMAN.  
@@ -163,7 +163,7 @@ SweaterWeather was the Mod 3 final solo project for the Turing School of Softwar
 
 
 
-
+</div
 
 
 
