@@ -10,9 +10,9 @@ A backend application, exposing any endpoint needed for planning a roadtrip.
   ### [Calling The Endpoints](#calling-the-endpoints)
   ### [Testing](#testing)
   ### [Credits](#credits)
-  ### [Technologies Used](#tech-behind-sweater-weather)
+  ### [The Tech Behind Sweater Weather](#tech-behind-sweater-weather)
   ### [About This Project](#about-this-project)
-  ### [Credits](#front-end-wire-frames)
+  ### [Front End Wire frames](#front-end-wire-frames)
 
 </div>
 
@@ -382,40 +382,43 @@ For returning background images for a given city<br><br>
   
   
 # THE TECH BEHIND SWEATER WEATHER
-- GitHub
-- VS Code
-- Ruby on Rails
-- Ruby
-- Postgresql
-Gems:
-- Bcrypt - encrypting user credentials
-- Faraday - consuming APIs
-- Webmock - testing API Consumption
-- VCR - Testing API Consumption
-- rspec - Test Suite
-- ShouldaMatchers - Testing/Database Management
-- Figaro - Environment Variables/Safe API Key Storage
-- SimpleCov - Test Coverage 
-- Pry - Debugging/Life Saving
+<div align="center">
+  <h2>
+    GitHub || VS Code || Ruby on Rails || Ruby || Postgresql || Postman
+ </h2>  
+</div>
+  <br>
+:gem: Additional Gems :gem:
+Bcrypt |
+Faraday |
+Webmock |
+VCR |
+Rspec-Rails |
+Shoulda Matchers |
+SimpleCov |
+Figaro |
+Pry (Gods Debugger) |<br><br>
+  
 
 # ABOUT SWEATER WEATHER
-***About SweaterWeather:***
+  <i>
 SweaterWeather was the Mod 3 final solo project for the Turing School of Software and Design's Back End program.  It was completed in five days.  The Retrieve Book Details and Forecast Data for a City end point was the final assessment/final independent challenge for Mod 3.  SweaterWeather was a challenging, hefty, but fun project to work on.  SweaterWeather brought many complex and interesting challenges to solve and it is a project that I am proud of.
+  </i>
   
 # FRONT END WIRE FRAMES
+  
+
+![root](https://user-images.githubusercontent.com/96802470/173705819-a44e66ec-d528-4eee-9899-e97842ab2e32.png)
 
 
 
+![sign_up](https://user-images.githubusercontent.com/96802470/173705834-7a1f2a92-2b02-4b07-b87f-eae3bc35df56.png)
 
 
+![login](https://user-images.githubusercontent.com/96802470/173705841-0236ee77-5871-4f51-9b83-52e03f6012ab.png)
 
 
-
-
-
-
-
-
+![road_trip](https://user-images.githubusercontent.com/96802470/173705846-6396a082-1de1-47f7-a872-53ba41f7a6b8.png)
 
 
 
