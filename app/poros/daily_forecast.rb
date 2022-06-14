@@ -1,5 +1,5 @@
 class DailyForecast
-  attr_reader :datetime, :sunrise, :sunset, :max_temp, :min_temp, :conditions, :icon
+  attr_reader :datetime, :sunrise, :sunset, :max_temp, :min_temp, :conditions, :icon, :temp
 
   def initialize(attributes)
     @datetime = Time.at(attributes[:dt]).strftime("%m/%d/%Y")
@@ -9,7 +9,7 @@ class DailyForecast
     @min_temp = attributes[:temp][:min]
     @conditions = attributes[:weather][0][:main]
     @icon = attributes[:weather][0][:icon]
-
+    @temp = attributes[:temp][:day]
   end 
 
 
