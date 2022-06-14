@@ -10,14 +10,14 @@ A backend application, exposing any endpoint needed for planning a roadtrip.
   ### [Calling The Endpoints](#calling-the-endpoints)
   ### [Testing](#testing)
   ### [Credits](#credits)
-  ### [Technologies Used](#technologies-used)
+  ### [Technologies Used](#tech-behind-sweater-weather)
   ### [About This Project](#about-this-project)
   ### [Credits](#front-end-wire-frames)
 
 </div>
 
 
-# Off the Bat
+# OFF THE BAT
   <div align="left">
 
 - Ruby 2.7.4
@@ -34,7 +34,7 @@ A backend application, exposing any endpoint needed for planning a roadtrip.
   - It should look like this: <br> <img width="462" alt="Screen Shot 2022-06-14 at 2 11 15 PM" src="https://user-images.githubusercontent.com/96802470/173698387-0df90ac5-d0b7-4c59-81f1-40b7ec8b1c85.png">
 </div>
 
-# Getting Started
+# GETTING STARTED
 <div align="left">
 :one: Fork or clone this repository <br><br>
 :two: Install all gems locally by running `bundle install` from your command line <br><br>
@@ -44,7 +44,7 @@ A backend application, exposing any endpoint needed for planning a roadtrip.
 </div>
   
 
-# Calling the Endpoints
+# CALLING THE ENDPOINTS
 <div align="center">  
   <h2><b>Retrieve Weather/Forecast Data for a City</b></h2>
  </div>
@@ -224,6 +224,8 @@ Example Request: <br>
 Content-Type: application/json
 Accept: application/json
 
+body: 
+  
 {
   "email": "skeeterthecorgi@corgi.com",
   "password": "skeeter",
@@ -235,6 +237,9 @@ Accept: application/json
 Example Response: <br>
 
 ```
+status: 200
+body:
+  
 {
     "data": {
         "type": "users",
@@ -265,6 +270,8 @@ POST /api/v1/sessions
 Content-Type: application/json
 Accept: application/json
 
+body:
+
 {
   "email": "skeeterthecorgi@corgi.com",
   "password": "skeeter"
@@ -276,6 +283,8 @@ Example Response: <br>
   
   
   ```
+status: 200
+body:
   {
     "data": {
         "type": "users",
@@ -291,39 +300,88 @@ Example Response: <br>
   ```
 
 
-About This Endpoint:
-Similar to the user sign up endpoint, the user login endpoint only accepts a users credentials through the request body.  The credentials are also only accessed/referenced by a private method in the SessionsController.  If a users password is successfully authenticated, the UserSerializer only includes the users id, email, and api key.  
+<h3>About This Endpoint:</h3><br>
+<i>Similar to the user sign up endpoint, the user login endpoint only accepts a users credentials through the request body.  The credentials are also only accessed/referenced by a private method in the SessionsController.  If a users password is successfully authenticated, the UserSerializer only includes the users id, email, and api key.</i>
 
+<br>
+  
+  
+<div align="center">  
+  <h2><b>Roadtrip Endpoint</b></h2>
+</div>
 
-*Roadtrip Endpoint*
+Example Request: <br>
+  
+```
+POST /api/v1/road_trip
+Content-Type: application/json
+Accept: application/json
 
-Example Request:
+body:
+  
+{
+  "origin": "seattle,wa",
+  "destination": "new york, ny",
+  "api_key": "3a31904f442331ef36275ed9de77a4"
+}
+  
+  
+```
 
+Example Response: <br>
+  
+```
+{
+    "data": {
+        "id": "null",
+        "type": "roadtrip",
+        "attributes": {
+            "start_city": "seattle,wa",
+            "end_city": "new york, ny",
+            "travel_time": "40:58:55",
+            "travel_distance": 2890.7729,
+            "weather_at_eta": {
+                "temperature": 80.28,
+                "conditions": "Clouds"
+            }
+        }
+    }
+}
+  
+  
+```
+  
 
-Example Response:
+<h3>About This Endpoint:</h3><br>
+<i>Surely the most complicated endpoint offered by SweaterWeather, the Roadtrip Endpoint offers an incredibly valuable response.  An origin, destination, and API key are sent in the body of the request.  If the API key is valid, SweaterWeather will make a call to the MapQuest Geocoding API to receive latitude and longitute for the destination city, these coordinates are used in a call to the OpenWeather API to obtain forecast data for that city.  Both the origin and destination parameters supplied are used to make a call to the MapQuest Directions API to get the route data for the trip.  Both the forecast and route data are used to create a RoadTrip PORO.  This PORO is used in the RoadTripSerializer to structure the response in a readable and maintainable way </i><br>
+<br>
 
-About This Endpoint:
-Surely the most complicated endpoint offered by SweaterWeather, the Roadtrip Endpoint offers an incredibly valuable response.  An origin, destination, and API key are sent in the body of the request.  If the API key is valid, SweaterWeather will make a call to the MapQuest Geocoding API to receive latitude and longitute for the destination city, these coordinates are used in a call to the OpenWeather API to obtain forecast data for that city.  Both the origin and destination parameters supplied are used to make a call to the MapQuest Directions API to get the route data for the trip.  Both the forecast and route data are used to create a RoadTrip PORO.  This PORO is used in the RoadTripSerializer to structure the response in a readable and maintainable way.  The response will include:
-- The origin city
-- The destination city
-- The estimated time of arrival
-- The total distance in miles for the trip
-- The weather forecast for the destination city at the time of arrival
-
-***ERROR HANDLING/TESTING:***
+# TESTING
+<br>
 Rspec Rails is the testing suite used in SweaterWeather.  Rspec allowed for readable, maintanable, and rigorous testing.  SweaterWeather has 100% test coverage.  All POROs, facades, services, controllers, and models are unit or integration tested. 
 Sad path testing is done in all applicable request tests, including invalid parameters, empty parameters, missing parameters, and invalid credentials. To run the test suite, run `bundle exec rspec` from your command line. 
 
 
-***CREDITS:***
-- openlibrary.orb API for book results / book-search endpoint
-- openweathermap.org one-call API for fetching forecast data for forecast endpoint
-- developer.mapquest.com Geocoding API for returning latitude and longitute for a given city
-- developer.mapquest.com Directions API for returning route data for an origin and destination city
-- unsplash.com API for returning background images for a given city
-Helpful Friends: @aspeth4, @jamesHarkins, @jamison, @juilet
+# CREDITS
+<br>
+  
+[Open Library Search API](https://openlibrary.org/dev/docs/api/search/)<br> 
+For book results / book-search endpoint <br><br>
+[OpenWeather One Call API](https://openweathermap.org/api/one-call-api#how/)<br>
+For fetching forecast data for forecast endpoint <br><br>
+[MapQuest Geocoding API](https://developer.mapquest.com/documentation/geocoding-api/)<br>
+For returning latitude and longitute for a given city <br><br>
+[MapQuest Route API](https://developer.mapquest.com/documentation/directions-api/route/get/) <br>
+For returning route data for an origin and destination city<br>
+[Unsplash Image Search API](https://unsplash.com/documentation#search-photos/)<br>
+For returning background images for a given city<br><br>
 
-***The Tech Behind SweaterWeather:***
+
+  
+  
+  
+  
+# THE TECH BEHIND SWEATER WEATHER
 - GitHub
 - VS Code
 - Ruby on Rails
@@ -340,23 +398,24 @@ Gems:
 - SimpleCov - Test Coverage 
 - Pry - Debugging/Life Saving
 
-
-
-***Front End Wireframes:***
-
-
-
-
-
-
-
-
-
-
-
-
+# ABOUT SWEATER WEATHER
 ***About SweaterWeather:***
 SweaterWeather was the Mod 3 final solo project for the Turing School of Software and Design's Back End program.  It was completed in five days.  The Retrieve Book Details and Forecast Data for a City end point was the final assessment/final independent challenge for Mod 3.  SweaterWeather was a challenging, hefty, but fun project to work on.  SweaterWeather brought many complex and interesting challenges to solve and it is a project that I am proud of.
+  
+# FRONT END WIRE FRAMES
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
