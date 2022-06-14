@@ -5,7 +5,6 @@ class Api::V1::ForecastController < ApplicationController
       coordinates = get_latitude_longitude
       forecast = ForecastFacade.get_forecast(coordinates.latitude, coordinates.longitude)
       render json: ForecastSerializer.forecast_poro(forecast)
-      # render json: ForecastSerializer.forecast(forecast)
     rescue NoMethodError
       render status: 404
     end 
