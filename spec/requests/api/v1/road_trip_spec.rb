@@ -141,9 +141,11 @@ RSpec.describe 'Road Trip Endpoint' do
 
       expect(response.status).to eq(401)
       result = JSON.parse(response.body, symbolize_names: true)
-
-
-
+     
+      expect(result).to have_key(:errors)
+      expect(result[:errors]).to have_key(:credentials)
+      expect(result[:errors][:credentials]).to eq(["Invalid API key"])
+    end
 
 
   end

@@ -11,6 +11,8 @@ class Api::V1::RoadTripController < ApplicationController
       else
         render json: ErrorSerializer.impossible_route(origin, destination)
       end 
+    else
+      render json: ErrorSerializer.bad_api_key, status: 401  
     end
   end
 

@@ -69,5 +69,15 @@ class ErrorSerializer
   }
   end 
 
+  def self.bad_api_key
+    { "errors":
+      {
+        "credentials": 
+         ['Invalid API key']
+        
+      }      
+    }
+  end
+
 
 end 
