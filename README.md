@@ -35,12 +35,13 @@ A backend application, exposing any endpoint needed for planning a roadtrip.
 </div>
 
 **To Get Started:**
-- Fork or clone this repository
-- Install all gems locally by running `bundle install` from your command line
-- Create/reset database by running `rails db:{drop,create,migrate} from your command line`.
-- Start your local server with `rails s` from the command line.
-- Call endpoints with a front end application or by using *POSTMAN*
-
+<div align="left">
+:one: Fork or clone this repository
+:two: Install all gems locally by running `bundle install` from your command line
+:three: Create/reset database by running `rails db:{drop,create,migrate} from your command line`.
+:four: Start your local server with `rails s` from the command line.
+:five: Call endpoints with a front end application or by using *POSTMAN*
+</div>
 **Calling the Endpoints**
 
 *Retrieve Weather/Forecast Data for a City*
