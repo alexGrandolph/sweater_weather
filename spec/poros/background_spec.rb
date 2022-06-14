@@ -11,7 +11,7 @@ RSpec.describe Background do
     expect(background.source).to eq('https://api.unsplash.com/photos/67uJo7mZPCo')
     expect(background.author).to eq('Andre Tan')
     expect(background.description).to eq("instagram: @andredantan")
-    expect(background.area).to eq("usa")
+    expect(background.area).to eq("Miami, FL")
     expect(background.area).to be_a String
 
   end
