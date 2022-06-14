@@ -22,7 +22,7 @@ A backend application, exposing any endpoint needed for planning a roadtrip.
 
 - Ruby 2.7.4
 - Rails 5.2.6
-- This repo is a functioning back end only application.  To reach the available endpoints, it is suggested to use POSTMAN.  
+- This repo is a functioning back end only application.  To reach the available endpoints, it is suggested to use [<img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white"/>](https://learning.postman.com/docs/getting-started/introduction/) .  
 - This repo is front end ready. `Click Here` for mock wire frames for a potential front end application.
 - The *MapQuest APIs*, the *Unsplash API*, and the *Open Weather API* will require API keys for this program to run locally. 
   - Visit each API providers webpage to create an account and receive an API key
@@ -36,11 +36,11 @@ A backend application, exposing any endpoint needed for planning a roadtrip.
 
 **To Get Started:**
 <div align="left">
-:one: Fork or clone this repository
-:two: Install all gems locally by running `bundle install` from your command line
-:three: Create/reset database by running `rails db:{drop,create,migrate} from your command line`.
-:four: Start your local server with `rails s` from the command line.
-:five: Call endpoints with a front end application or by using *POSTMAN*
+:one: Fork or clone this repository <br><br>
+:two: Install all gems locally by running `bundle install` from your command line <br><br>
+:three: Create/reset database by running `rails db:{drop,create,migrate} from your command line`. <br><br>
+:four: Start your local server with `rails s` from the command line. <br><br> 
+:five: Call endpoints with a front end application or by using *POSTMAN* <br><br>
 </div>
 **Calling the Endpoints**
 
