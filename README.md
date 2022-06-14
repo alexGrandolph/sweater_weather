@@ -16,7 +16,10 @@ A backend application, exposing any endpoint needed for planning a roadtrip.
 
 
 
+
 # Off the Bat
+  <div align="left">
+
 - Ruby 2.7.4
 - Rails 5.2.6
 - This repo is a functioning back end only application.  To reach the available endpoints, it is suggested to use POSTMAN.  
@@ -29,7 +32,7 @@ A backend application, exposing any endpoint needed for planning a roadtrip.
   - Use the variable `MAPQUEST_KEY` for your MapQuest API key
   - Use the variable `Unsplash_KEY` for your MapQuest API key
   - It should look like this: <image here>
-
+</div>
 
 **To Get Started:**
 - Fork or clone this repository
