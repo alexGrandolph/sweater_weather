@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Road Trip Endpoint' do
   describe 'Happy Path' do
-    it 'Returns road trip data', :vcr do
+    it 'Returns road trip data' do
       user = User.create!({
         email: 'mydogskeeter@skeeter.dog',
         password: "dogdogdog",

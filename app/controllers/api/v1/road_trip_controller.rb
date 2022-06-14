@@ -7,8 +7,8 @@ class Api::V1::RoadTripController < ApplicationController
     api_key = params[:api_key]
     # binding.pry
     if User.find_by(api_key: api_key)
-      route_and_forecast = RoadTripFacade.route(origin, destination)
-      render json: RoadTripSerializer.road_trip(origin, destination, route_and_forecast)
+      road_trip = RoadTripFacade.route(origin, destination)
+      render json: RoadTripSerializer.road_trip(origin, destination, road_trip)
     end
   end
 
