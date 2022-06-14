@@ -54,11 +54,10 @@ RSpec.describe 'Get Book-Search Endpoint' do
 
       result = JSON.parse(response.body, symbolize_names: true)
       
-      expect(result).to have_key(:data)
-      expect(result[:data]).to have_key(:error)
+      expect(result).to have_key(:errors)
+      expect(result[:errors]).to have_key(:quantity)
 
-      expect(result[:data][:error]).to have_key(:message)
-      expect(result[:data][:error][:message]).to eq("Quantity must be a positive integer greater than zero")
+      expect(result[:errors][:quantity]).to eq(["Quantity must be a positive integer greater than zero"])
     end 
 
     it 'giving empty location results in empty location error response', :vcr do
@@ -69,11 +68,10 @@ RSpec.describe 'Get Book-Search Endpoint' do
 
       result = JSON.parse(response.body, symbolize_names: true)
       
-      expect(result).to have_key(:data)
-      expect(result[:data]).to have_key(:error)
+      expect(result).to have_key(:errors)
+      expect(result[:errors]).to have_key(:location)
 
-      expect(result[:data][:error]).to have_key(:message)
-      expect(result[:data][:error][:message]).to eq("Location parameter cannot be blank")
+      expect(result[:errors][:location]).to eq(["Location parameter cannot be blank"])
     end 
 
     it 'Returns an error message if no book results found for location', :vcr do
@@ -84,11 +82,10 @@ RSpec.describe 'Get Book-Search Endpoint' do
 
       result = JSON.parse(response.body, symbolize_names: true)
 
-      expect(result).to have_key(:data)
-      expect(result[:data]).to have_key(:error)
+      expect(result).to have_key(:errors)
+      expect(result[:errors]).to have_key(:books)
 
-      expect(result[:data][:error]).to have_key(:message)
-      expect(result[:data][:error][:message]).to eq("No book matches for given location")
+      expect(result[:errors][:books]).to eq(["No book matches for given location"])
 
     end 
 
