@@ -14,7 +14,7 @@ A backend application, exposing any endpoint needed for planning a roadtrip.
   ### [About This Project](#about-this-project)
   ### [Credits](#front-end-wire-frames)
 
-
+</div>
 
 
 # Off the Bat
@@ -23,7 +23,7 @@ A backend application, exposing any endpoint needed for planning a roadtrip.
 - Ruby 2.7.4
 - Rails 5.2.6
 - This repo is a functioning back end only application.  To reach the available endpoints, it is suggested to use [<img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white"/>](https://learning.postman.com/docs/getting-started/introduction/) .  
-- This repo is front end ready. [Click Here :computer_mouse:](#frontend) for mock wire frames for a potential front end application.
+- This repo is front end ready. [Click Here](#front-end-wire-frames) for mock wire frames for a potential front end application.
 - The *MapQuest APIs*, the *Unsplash API*, and the *Open Weather API* will require API keys for this program to run locally. 
   - Visit each API providers webpage to create an account and receive an API key
   - Run `bundle exec figaro install` from your command line to generate the `application.yml` file locally
