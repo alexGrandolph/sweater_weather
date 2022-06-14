@@ -2,11 +2,11 @@ class Background
   attr_reader :description, :image_url, :source, :author, :area
 
   def initialize(attributes)
-    @description = attributes[:description]
+    @description = attributes[:description] || attributes[:alt_description]
     @image_url = attributes[:urls][:full]
     @source = attributes[:links][:self]
     @author = attributes[:user][:name]
-    @area = attributes[:tags][0][:title]
+    @area = attributes[:user][:location] || ""
   end 
 
 end
