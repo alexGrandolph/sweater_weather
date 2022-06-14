@@ -1,5 +1,4 @@
 <div align="center">
-![Screen Shot 2022-06-14 at 5 42 43 PM](https://user-images.githubusercontent.com/96802470/173707114-1b36c718-a468-48a4-ab92-9a35142094bf.png)
 
   <h1>This is Sweater Weather</h1>
   <h2>A backend application, exposing any endpoint needed for planning a roadtrip. </h2>
