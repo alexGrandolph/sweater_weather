@@ -76,9 +76,39 @@ RSpec.describe 'Road Trip Endpoint' do
       expect(attributes[:weather_at_eta][:temperature]).to be_a Float
 
     end 
-
-
-
-
   end 
+
+  describe 'Sad Path' do
+
+    it 'returns impossible route, if route is impossible' do
+      user = User.create!({
+        email: 'mydogskeeter@skeeter.dog',
+        password: "dogdogdog",
+        api_key: '75fb908a28ee7690ff8c2d8c2c5fdb'
+      })
+      
+      headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
+      payload = {
+        "origin": 'honolulu,hi',
+        "destination": "milwaukee, wi",
+        "api_key": "75fb908a28ee7690ff8c2d8c2c5fdb"
+      }
+
+      post '/api/v1/road_trip', headers: headers, params: JSON.generate(payload)
+
+      result = JSON.parse(response.body, symbolize_names: true)
+
+
+
+
+
+
+    end 
+
+
+
+
+
+
+  end
 end 

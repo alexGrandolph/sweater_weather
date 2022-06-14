@@ -9,7 +9,9 @@
 
 
 
-ba9f9b86c6b8e07dad59e702823260
+london: lat: 44.39474   long: -88.73069
+
+honolulu lat: 21.30992  long: -157.858158
 
 
 
