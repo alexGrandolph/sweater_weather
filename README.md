@@ -24,7 +24,7 @@ A backend application, exposing any endpoint needed for planning a roadtrip.
 - Rails 5.2.6
 - This repo is a functioning back end only application.  To reach the available endpoints, it is suggested to use [<img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white"/>](https://learning.postman.com/docs/getting-started/introduction/) .  
 - This repo is front end ready. [Click Here](#front-end-wire-frames) for mock wire frames for a potential front end application.
-- The *MapQuest APIs*, the *Unsplash API*, and the *Open Weather API* will require API keys for this program to run locally. 
+- The [MapQuest APIs](https://developer.mapquest.com/), the *Unsplash API*, and the *Open Weather API* will require API keys for this program to run locally. 
   - Visit each API providers webpage to create an account and receive an API key
   - Run `bundle exec figaro install` from your command line to generate the `application.yml` file locally
   - From your command line run `<code/atom/idea> config/application.yml` to open the `application.yml`    file in your text editor. 
@@ -34,7 +34,7 @@ A backend application, exposing any endpoint needed for planning a roadtrip.
   - It should look like this: <image here>
 </div>
 
-**To Get Started:**
+# Getting Started
 <div align="left">
 :one: Fork or clone this repository <br><br>
 :two: Install all gems locally by running `bundle install` from your command line <br><br>
