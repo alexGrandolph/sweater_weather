@@ -1,32 +1,26 @@
 class ErrorSerializer
 
   def self.bad_quantity
-    { "data":
+    { "errors":
       {
-        "error": {
-          "message": 'Quantity must be a positive integer greater than zero'
-        }
+        "quantity": ['Quantity must be a positive integer greater than zero']
       }      
     }
   end 
 
   def self.empty_location
-    { "data":
+    { "errors":
       {
-        "error": {
-          "message": 'Location parameter cannot be blank'
-        }
+        "location": ['Location parameter cannot be blank']
       }      
     }
   end 
 
 
   def self.no_books_found
-    { "data":
+    { "errors":
       {
-        "error": {
-          "message": 'No book matches for given location'
-        }
+        "books": ['No book matches for given location']
       }      
     }
   end 
@@ -34,9 +28,7 @@ class ErrorSerializer
   def self.password_mismatch
     { "errors":
       {
-        "password": 
-         ['Passwords do not match']
-        
+        "password": ['Passwords do not match']
       }      
     }
   end
@@ -44,9 +36,7 @@ class ErrorSerializer
   def self.bad_credentials
     { "errors":
       {
-        "credentials": 
-         ['Bad credentials']
-        
+        "credentials": ['Bad credentials']
       }      
     }
   end
@@ -72,9 +62,7 @@ class ErrorSerializer
   def self.bad_api_key
     { "errors":
       {
-        "credentials": 
-         ['Invalid API key']
-        
+        "credentials": ['Invalid API key']
       }      
     }
   end
