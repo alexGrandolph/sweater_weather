@@ -121,9 +121,26 @@ RSpec.describe 'Road Trip Endpoint' do
       expect(attributes[:travel_time]).to eq("impossible route")
       expect(attributes[:travel_distance]).to eq("impossible route")
 
-
     end 
 
+    it 'returns 401 status if invalid api key is given' do
+      user = User.create!({
+        email: 'mydogskeeter@skeeter.dog',
+        password: "dogdogdog",
+        api_key: '75fb908a28ee7690ff8c2d8c2c5fdb'
+      })
+      
+      headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
+      payload = {
+        "origin": 'honolulu,hi',
+        "destination": "milwaukee, wi",
+        "api_key": "totally legi api key don't worry"
+      }
+
+      post '/api/v1/road_trip', headers: headers, params: JSON.generate(payload)
+
+      expect(response.status).to eq(401)
+      result = JSON.parse(response.body, symbolize_names: true)
 
 
 

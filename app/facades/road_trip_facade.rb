@@ -2,7 +2,6 @@ class RoadTripFacade
 
   def self.route(origin, destination)
     data = RouteService.get_route(origin, destination)
-    # binding.pry
     if data[:info][:messages].blank? == true 
       route = Route.new(data)
       unformatted = LocationService.location_by_city(destination)
