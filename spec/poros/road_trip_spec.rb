@@ -15,10 +15,9 @@ RSpec.describe RoadTrip do
     expect(trip).to be_a RoadTrip
     expect(trip.forecast).to eq(forecast)
     expect(trip.route).to eq(route)
-    expect(trip.travel_time).to eq("06:23:02")
-    expect(trip.distance).to eq(446.136)
-    expect(trip.forecast_at_arrival).to eq(forecast.hourly[6])
-    # binding.pry
+    expect(trip.travel_time).to eq("06 hours, 23 minutes")
+    expect(trip.distance).to eq("446 miles")
+    expect(trip.forecast_at_arrival).to eq(forecast.hourly[5])
 
   end
 end

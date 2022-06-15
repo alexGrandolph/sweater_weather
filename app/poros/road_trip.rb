@@ -7,8 +7,9 @@ class RoadTrip
     @arrival_time = Time.now + route.total_seconds
     @total_seconds = route.total_seconds
     @forecast_at_arrival = forecast_at_arrival
-    @travel_time = route.time
-    @distance = route.distance
+    @time = route.time
+    @travel_time = travel_time
+    @distance = "#{route.distance.round(0)} miles"
     
   end
   
@@ -21,5 +22,11 @@ class RoadTrip
     end 
     arrival_forecast
   end
+
+  def travel_time
+    time_array = @time.split(":")
+    "#{time_array[0]} hours, #{time_array[1]} minutes"
+    # binding.pry
+  end 
 
 end 
