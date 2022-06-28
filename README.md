@@ -48,14 +48,16 @@
 <div align="center">  
   <h2><b>Retrieve Weather/Forecast Data for a City</b></h2>
  </div>
-Example Request:
+Example Request: <br>
 
-<br>
+
+
 ```
 GET /api/v1/forecast?location=denver,co
 Content-Type: application/json
 Accept: application/json
 ```
+
 <br>
   
 Example Response:
