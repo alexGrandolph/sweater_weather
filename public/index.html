@@ -4,12 +4,15 @@
     padding: 0;
     background-image: url(rain_road.jpg);
     background-size: cover;
+    z-index: -1;
   }
 
   .rain {
     height: 100vh;
     background-image: url(rain.png);
     animation: rain 0.3s linear infinite;
+    z-index: -1;
+
   }
   @keyframes rain{
     0%{
@@ -29,6 +32,8 @@
     transform: rotate(180deg);
     animation: lightining 4s linear infinite;
     opacity: .1;
+    z-index: -1;
+
 }
 @keyframes lightining{
     0%{
@@ -76,7 +81,17 @@ h1 {
   margin-top: 5%;
   justify-content: left;
   padding: 20px;
+  z-index: 60;
 }
+a {
+  font-size: 1.5em;
+  color:rgb(2, 2, 2)
+}
+
+a:hover { 
+  color: rgb(247, 247, 247);
+ }
+
 text {
   font-family: 'Merriweather', serif;
   font-size: 1.5em;
@@ -85,7 +100,7 @@ text {
   box-shadow: 5px 5px rgb(192, 192, 184);
   border-radius: 20px;
   background-color:rgba(240, 240, 221, 0.835);
-  width: 60%;
+  width: 70%;
  
   align-items: center;
   margin-top: 5%;
@@ -99,11 +114,14 @@ code {
   font-size: 1.5em;
   /* background-color:rgba(107, 107, 106, 0.776); */
   /* padding-left: 40%; */
-  
+}
+img {
+  width: 55%;
+  height: 35%;
 }
 
 </style>
-
+<!DOCTYPE html>
 <head>
   <title>Sweater Weather</title>
 
@@ -128,7 +146,15 @@ code {
     </div>
 
     <div class="description-container">
-      <text>Sweater Weather is a Rails API that aggregates all forecast/weather, background image, book, and road trip data that a front end application could need.</text>
+      <text>Sweater Weather is a Rails API that aggregates all forecast/weather, background image, book, and road trip data that a front end application could need. Created by Alex Randolph.</text>
+      <br>
+          <a href="https://www.alexgrandolph.dev/" target="_blank">Portfolio</a> <a>||</a> <a
+            href="https://github.com/alexGrandolph" target="_blank">GitHub</a> <a>||</a> <a
+            href="https://www.linkedin.com/in/alexgrandolph/" target="_blank">LinkedIn</a><a>||</a>
+     <a class="link" href="https://github.com/alexGrandolph/sweater_weather"><u>This Repo</u></a>
+    </div>
+    <div class="links">
+
     </div>
 
     <div class="endpoints-container">
@@ -136,16 +162,27 @@ code {
     </div>
     <div class="endpoints-container">
      
-      <code>GET /api/v1/forecast?location=denver,co<br>
-       </code><br>
-
-      <code>GET /api/v1/backgrounds?location=atlanta,ga
-      </code><br><br>
+      <code style="font-size: 2em;">Base URL: https://api-sweater-weather.herokuapp.com/<br></code><br>
+      <code style="font-size: 2em;">Query Parameters: location={location}, quantity={qty}<br></code><br>
       
+      <code>GET /api/v1/forecast?location=denver,co<br></code><br>
+      <code style="font-size: 2em;">Example Response:<br></code><br>
+      <img src="forecast.png"><br><br>
+      
+      <code>GET /api/v1/backgrounds?location=atlanta,ga</code><br><br>
+      <code style="font-size: 2em;">Example Response:<br></code><br>
+      <img src="background.png"><br><br>
 
       <code>GET /api/v1/book-search?location=albuquerque,nm&quantity=2</code><br><br>
+      <code style="font-size: 2em;">Example Response:<br></code><br>
+      <img src="book.png"><br><br>
 
       <code>GET /api/v1/backgrounds?location=atlanta,ga</code><br><br>
+      <code style="font-size: 2em;">Example Response:<br></code><br>
+      <img src="background.png"><br><br>
+
+      <code style="font-size: 2em;">The following endpoints should send parameters in the request body and not query parameters.<br></code><br>
+
       <code>POST /api/v1/users<br>
       body:
       {
@@ -153,6 +190,8 @@ code {
       "password": "skeeter",<br>
       "password_confirmation": "skeeter"}<br>
       </code><br><br>
+      <code style="font-size: 2em;">Example Response:<br></code><br>
+      <img style="width:65%"src="signup.png"><br><br>
 
       <code>POST /api/v1/sessions<br>
       body:
@@ -160,6 +199,8 @@ code {
       "email": "skeeterthecorgi@corgi.com",<br>
       "password": "skeeter"}<br>
       </code><br><br>
+      <code style="font-size: 2em;">Example Response:<br></code><br>
+      <img style="width:65%" src="login.png"><br><br>
 
       <code>POST /api/v1/road_trip<br>
       body:
@@ -168,7 +209,9 @@ code {
       "desination": "new york, ny"<br>
       "api_key": "api_key_here"}
       </code><br><br>
-      
+      <code style="font-size: 2em;">Example Response:<br></code><br>
+      <img style="width:65%" src="roadtrip.png"><br><br>
+
       
       
       </div>
