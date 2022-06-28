@@ -1,0 +1,181 @@
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url(rain_road.jpg);
+    background-size: cover;
+  }
+
+  .rain {
+    height: 100vh;
+    background-image: url(rain.png);
+    animation: rain 0.3s linear infinite;
+  }
+  @keyframes rain{
+    0%{
+        background-position: 0% 0%;
+    }
+    100%{
+        background-position: 20% 100%;
+    }
+}
+.rain::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(lightining.png);
+    top: -100px;
+    transform: rotate(180deg);
+    animation: lightining 4s linear infinite;
+    opacity: .1;
+}
+@keyframes lightining{
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 0;
+    }
+    21%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 0;
+    }
+    31%{
+        opacity: 1;
+    }
+    35%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.heading-container {
+  box-shadow: 5px 5px rgb(192, 192, 184);
+  border-radius: 20px;
+  background-color:rgba(240, 240, 221, 0.835);
+  width: 60%;
+  align-items: center;
+  margin-top: 5%;
+}
+
+h1 {
+  font-size: 7em;
+  font-family: 'Rubik Moonrocks', cursive;
+}
+.description-container {
+  border-radius: 5px;
+  background-color:rgba(240, 240, 221, 0.835);
+  width: 60%;
+  margin-top: 5%;
+  justify-content: left;
+  padding: 20px;
+}
+text {
+  font-family: 'Merriweather', serif;
+  font-size: 1.5em;
+ }
+.endpoints-container {
+  box-shadow: 5px 5px rgb(192, 192, 184);
+  border-radius: 20px;
+  background-color:rgba(240, 240, 221, 0.835);
+  width: 60%;
+ 
+  align-items: center;
+  margin-top: 5%;
+}
+
+h2 {
+  font-size: 4em;
+  font-family: 'Rubik Moonrocks', cursive;
+}
+code {
+  font-size: 1.5em;
+  /* background-color:rgba(107, 107, 106, 0.776); */
+  /* padding-left: 40%; */
+  
+}
+
+</style>
+
+<head>
+  <title>Sweater Weather</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&family=Rubik+Moonrocks&display=swap"
+  rel="stylesheet">
+
+
+</head>
+
+<body>
+  <div class="rain">
+  <center>
+    <div class="heading-container">
+      <h1>Sweater Weather</h1>
+    </div>
+
+    <div class="description-container">
+      <text>Sweater Weather is a Rails API that aggregates all forecast/weather, background image, book, and road trip data that a front end application could need.</text>
+    </div>
+
+    <div class="endpoints-container">
+      <h2>End Points</h2>
+    </div>
+    <div class="endpoints-container">
+     
+      <code>GET /api/v1/forecast?location=denver,co<br>
+       </code><br>
+
+      <code>GET /api/v1/backgrounds?location=atlanta,ga
+      </code><br><br>
+      
+
+      <code>GET /api/v1/book-search?location=albuquerque,nm&quantity=2</code><br><br>
+
+      <code>GET /api/v1/backgrounds?location=atlanta,ga</code><br><br>
+      <code>POST /api/v1/users<br>
+      body:
+      {
+      "email": "skeeterthecorgi@corgi.com",<br>
+      "password": "skeeter",<br>
+      "password_confirmation": "skeeter"}<br>
+      </code><br><br>
+
+      <code>POST /api/v1/sessions<br>
+      body:
+      {
+      "email": "skeeterthecorgi@corgi.com",<br>
+      "password": "skeeter"}<br>
+      </code><br><br>
+
+      <code>POST /api/v1/road_trip<br>
+      body:
+      {
+      "origin": "seattle,wa",<br>
+      "desination": "new york, ny"<br>
+      "api_key": "api_key_here"}
+      </code><br><br>
+      
+      
+      
+      </div>
+    </center>
+      
+  <div class="lightning"></div>
+</div>
+</body>
+
+</html>
