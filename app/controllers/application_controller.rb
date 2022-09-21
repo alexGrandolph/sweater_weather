@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::API
+  # protect_from_forgery with: :exception
+  
   rescue_from ActiveRecord::RecordInvalid, with: :render_bad_credentials_response
   private
   
